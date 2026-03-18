@@ -3,1008 +3,1001 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Numerology Calculator | All 5 Numbers</title>
+    <title>✦ COSMIC LIFE PATH · THE ARCHETYPAL BLUEPRINT ✦</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff6b6b 100%);
+            background: radial-gradient(ellipse at top, #030514 0%, #0A0F1F 50%, #010314 100%);
             min-height: 100vh;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 30px 20px;
+            color: #e0e5f0;
+            line-height: 1.5;
+            background-image: 
+                radial-gradient(1px 1px at 15% 30%, rgba(255,255,255,0.15) 1px, transparent 0),
+                radial-gradient(1px 1px at 72% 85%, rgba(200,220,255,0.1) 1px, transparent 0),
+                radial-gradient(2px 2px at 5% 92%, rgba(255,215,0,0.08) 1px, transparent 0),
+                radial-gradient(2px 2px at 45% 15%, rgba(100,150,255,0.1) 1px, transparent 0),
+                radial-gradient(3px 3px at 88% 42%, rgba(150,150,255,0.1) 1px, transparent 0),
+                radial-gradient(1px 1px at 33% 67%, rgba(255,255,255,0.15) 1px, transparent 0),
+                radial-gradient(ellipse at 20% 40%, rgba(25,40,75,0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 70%, rgba(15,25,55,0.5) 0%, transparent 50%);
+            background-size: 200px 200px, 300px 300px, 400px 400px, 500px 500px, 600px 600px, 150px 150px, 100% 100%, 100% 100%;
+            background-attachment: fixed;
         }
         
-        .container {
+        .cosmic-container {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
         }
         
         /* Header */
-        .header {
-            text-align: center;
+        .stellar-header {
             margin-bottom: 40px;
-            color: white;
+            text-align: center;
+            border-bottom: 1px solid rgba(100, 150, 255, 0.25);
+            padding-bottom: 30px;
+            position: relative;
+        }
+        
+        .stellar-header::before {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4a7db5, #9f7aea, #4a7db5, transparent);
+            filter: blur(1px);
+        }
+        
+        .glyph-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .glyph {
+            font-size: 42px;
+            filter: drop-shadow(0 0 15px rgba(100, 150, 255, 0.6));
+            opacity: 0.9;
         }
         
         h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-size: 3.2rem;
+            font-weight: 300;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #c0d0ff, #a5b9ff, #c5b4ff, #a5b9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            text-shadow: 0 0 30px rgba(90, 120, 255, 0.3);
         }
         
         .subtitle {
-            font-size: 18px;
-            opacity: 0.9;
-            font-style: italic;
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #9aa9c9;
+            text-transform: uppercase;
+            word-spacing: 8px;
         }
         
-        /* Input Section */
-        .input-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        .subtitle span {
+            color: #bca0ff;
+            font-weight: 400;
+        }
+        
+        /* Input Card */
+        .oracle-card {
+            background: rgba(5, 10, 25, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(120, 150, 240, 0.25);
+            border-radius: 24px;
+            padding: 40px 35px;
+            margin-bottom: 45px;
+            box-shadow: 0 25px 45px -15px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,255,255,0.03);
+            transition: border-color 0.3s;
+        }
+        
+        .oracle-card:hover {
+            border-color: rgba(140, 170, 255, 0.45);
         }
         
         .input-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            align-items: end;
         }
         
-        .input-group {
-            margin-bottom: 0;
+        .field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
         
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #555;
-            font-weight: 600;
-            font-size: 14px;
+        .field-group label {
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #a0b5e0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
         
-        .input-group input {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s;
+        .field-group label .icon-symbol {
+            color: #bca0ff;
+            font-size: 1.2rem;
         }
         
-        .input-group input:focus {
+        .field-group input {
+            background: rgba(10, 15, 30, 0.7);
+            border: 1px solid #2a3850;
+            border-radius: 14px;
+            padding: 16px 18px;
+            font-size: 1rem;
+            color: #ffffff;
+            font-weight: 400;
+            transition: all 0.2s;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+        }
+        
+        .field-group input:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #7f9fff;
+            box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2), inset 0 2px 8px #000;
         }
         
-        .helper-text {
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
+        .field-group input::placeholder {
+            color: #4a5775;
+            font-weight: 300;
         }
         
         .button-group {
             display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 12px;
         }
         
         .primary-btn {
-            flex: 2;
-            padding: 16px 30px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
+            background: linear-gradient(145deg, #19233f, #0e1428);
+            border: 1px solid #3e5270;
+            border-radius: 40px;
+            padding: 18px 28px;
+            font-size: 1.2rem;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #d0deff;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            min-width: 200px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 0 #080c18, 0 10px 20px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
         }
         
         .primary-btn:hover {
+            background: linear-gradient(145deg, #202e50, #121a32);
+            border-color: #6f8ad0;
+            color: #ffffff;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 0 #0a0f1c, 0 15px 25px rgba(0,0,0,0.5);
+        }
+        
+        .primary-btn:active {
+            transform: translateY(6px);
+            box-shadow: 0 4px 0 #080c18, 0 8px 15px rgba(0,0,0,0.4);
         }
         
         .secondary-btn {
-            flex: 1;
-            padding: 16px 20px;
-            background: white;
-            color: #667eea;
-            border: 2px solid #667eea;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
+            background: transparent;
+            border: 1px solid #3f5280;
+            border-radius: 40px;
+            padding: 14px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #a5b5d9;
             cursor: pointer;
-            transition: all 0.2s;
-            min-width: 150px;
+            transition: 0.2s;
         }
         
         .secondary-btn:hover {
-            background: #667eea;
-            color: white;
+            background: rgba(50, 70, 120, 0.3);
+            border-color: #7088cc;
+            color: #ffffff;
         }
         
-        /* Dashboard Grid */
-        .dashboard {
+        /* Result Dashboard */
+        .revelation-dashboard {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.3, 1), transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1);
+            pointer-events: none;
+        }
+        
+        .revelation-dashboard.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        
+        /* Primary Number Display */
+        .number-throne {
+            background: rgba(5, 8, 18, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid #314a6e;
+            border-radius: 40px;
+            padding: 35px 40px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 20px 40px -10px black, inset 0 0 40px rgba(70, 130, 255, 0.1);
+            position: relative;
+        }
+        
+        .number-throne::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 40px;
+            padding: 2px;
+            background: linear-gradient(145deg, #5f7db0, #2e3f60, #1e2b40);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        
+        .life-number-glow {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .life-number-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #98abda;
+        }
+        
+        .life-number-value {
+            font-size: 8rem;
+            font-weight: 200;
+            line-height: 1;
+            background: linear-gradient(145deg, #ffffff, #b0c8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px #3f6ac0;
+        }
+        
+        .life-number-value.master {
+            font-size: 6.5rem;
+            background: linear-gradient(145deg, #ffd966, #ffb347, #ff9f4b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px #f90;
+        }
+        
+        .vibration-meter {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+        
+        .vibration-badge {
+            background: #0f1b2c;
+            border: 1px solid #2b4770;
+            border-radius: 40px;
+            padding: 10px 28px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #adc4ff;
+        }
+        
+        .vibration-bar {
+            width: 240px;
+            height: 8px;
+            background: #162135;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #2c3f60;
+        }
+        
+        .vibration-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #6c8cda, #b79eff);
+            border-radius: 10px;
+            box-shadow: 0 0 15px #6b8cff;
+        }
+        
+        /* Archetype Grid */
+        .archetype-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
             margin-bottom: 30px;
         }
         
-        /* Number Cards */
-        .number-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.5s forwards;
+        .pillar-card {
+            background: rgba(6, 12, 24, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid #263959;
+            border-radius: 28px;
+            padding: 25px 20px;
+            transition: 0.25s;
+            box-shadow: 0 15px 25px -15px #000;
         }
         
-        .number-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        .pillar-card:hover {
+            border-color: #4f6ea5;
+            background: rgba(10, 18, 32, 0.8);
         }
         
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Card animations delay */
-        .card1 { animation-delay: 0.1s; }
-        .card2 { animation-delay: 0.2s; }
-        .card3 { animation-delay: 0.3s; }
-        .card4 { animation-delay: 0.4s; }
-        .card5 { animation-delay: 0.5s; }
-        
-        .card-header {
+        .pillar-header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 12px;
             margin-bottom: 20px;
+            border-bottom: 1px solid #263e60;
             padding-bottom: 15px;
-            border-bottom: 2px solid #f0f0f0;
         }
         
-        .card-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #333;
+        .pillar-header h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #cddeff;
         }
         
-        .card-icon {
-            font-size: 24px;
-        }
-        
-        .number-display {
-            font-size: 72px;
-            font-weight: 800;
-            line-height: 1;
-            margin: 15px 0;
-            text-align: center;
-        }
-        
-        .life-path .number-display { color: #667eea; }
-        .destiny .number-display { color: #764ba2; }
-        .soul .number-display { color: #ff6b6b; }
-        .personality .number-display { color: #43cea2; }
-        .personal-year .number-display { color: #f6ad55; }
-        
-        .master-badge {
-            display: inline-block;
-            background: #ffd700;
-            color: #333;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-        
-        .card-meaning {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-top: 15px;
-            max-height: 100px;
-            overflow-y: auto;
-            padding-right: 10px;
-        }
-        
-        .card-meaning::-webkit-scrollbar {
-            width: 5px;
-        }
-        
-        .card-meaning::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        
-        .card-meaning::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-        
-        .view-details {
-            color: #667eea;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 10px;
-            text-align: right;
-        }
-        
-        .view-details:hover {
-            text-decoration: underline;
-        }
-        
-        /* Expanded Details Section */
-        .details-section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            display: none;
-        }
-        
-        .details-section.show {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .details-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        
-        .details-title {
+        .pillar-icon {
             font-size: 28px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #c9adff;
+            filter: drop-shadow(0 0 8px #5275cc);
         }
         
-        .close-btn {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #999;
-            transition: color 0.3s;
+        .pillar-content {
+            color: #bfd0f0;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
         
-        .close-btn:hover {
-            color: #ff6b6b;
-        }
-        
-        .calculation-box {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            font-family: monospace;
-            white-space: pre-wrap;
-            line-height: 1.6;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .full-meaning {
-            line-height: 1.8;
-            color: #555;
-            font-size: 16px;
-        }
-        
-        /* Summary Card */
-        .summary-card {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+        .pillar-content strong {
             color: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-top: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .summary-title {
-            font-size: 24px;
             font-weight: 600;
-            margin-bottom: 20px;
-            text-align: center;
         }
         
-        .summary-grid {
+        .pillar-content .highlight {
+            color: #ffbc6c;
+        }
+        
+        .pillar-content .warning {
+            color: #ff8a8a;
+        }
+        
+        /* Strength/Weakness Row */
+        .duality-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .duality-card {
+            background: rgba(6, 12, 24, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid #2c3d5c;
+            border-radius: 28px;
+            padding: 25px;
+        }
+        
+        .duality-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .strength .duality-title { color: #9bddff; }
+        .weakness .duality-title { color: #ffa6a6; }
+        
+        .duality-list {
+            list-style: none;
+        }
+        
+        .duality-list li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: #c7d3f0;
+        }
+        
+        .duality-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #6f94e0;
+        }
+        
+        .weakness .duality-list li::before {
+            color: #ff8a8a;
+        }
+        
+        /* Secret Self / Deep Inquiry */
+        .depth-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .secret-self {
+            background: rgba(4, 8, 18, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid #3c507a;
+            border-radius: 28px;
+            padding: 30px;
+        }
+        
+        .secret-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .secret-header h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ebd6ff;
+        }
+        
+        .secret-content {
+            font-size: 1.05rem;
+            color: #d3e0ff;
+            font-style: italic;
+            border-left: 2px solid #5c79b0;
+            padding-left: 25px;
+        }
+        
+        .asked-pillar {
+            background: rgba(4, 8, 18, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid #3c507a;
+            border-radius: 28px;
+            padding: 30px;
+        }
+        
+        .asked-pillar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            color: #b2c6ff;
+        }
+        
+        /* Sub pillars */
+        .sub-pillars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            text-align: center;
+            margin-bottom: 30px;
         }
         
-        .summary-item {
-            padding: 15px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
+        .minor-pillar {
+            background: rgba(5, 10, 22, 0.6);
+            backdrop-filter: blur(6px);
+            border: 1px solid #2e4165;
+            border-radius: 20px;
+            padding: 22px;
         }
         
-        .summary-label {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 5px;
-        }
-        
-        .summary-number {
-            font-size: 36px;
-            font-weight: 700;
+        .minor-pillar h4 {
+            margin-bottom: 15px;
+            color: #a6beff;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            font-size: 1.1rem;
         }
         
         /* Footer */
-        .footer {
+        .cosmic-footer {
+            margin-top: 50px;
             text-align: center;
-            color: white;
-            opacity: 0.8;
-            font-size: 14px;
-            margin-top: 40px;
+            color: #4f6390;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            border-top: 1px solid #1a2740;
+            padding-top: 25px;
         }
         
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 { font-size: 32px; }
-            .dashboard { grid-template-columns: 1fr; }
-            .button-group { flex-direction: column; }
-            .primary-btn, .secondary-btn { width: 100%; }
+        .footnote {
+            color: #303e60;
+            margin-top: 8px;
+        }
+        
+        @media (max-width: 950px) {
+            h1 { font-size: 2.5rem; letter-spacing: 5px; }
+            .archetype-grid { grid-template-columns: repeat(2, 1fr); }
+            .depth-section { grid-template-columns: 1fr; }
+            .sub-pillars { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .archetype-grid { grid-template-columns: 1fr; }
+            .duality-row { grid-template-columns: 1fr; }
+            .number-throne { flex-direction: column; align-items: start; gap: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>🔮 Complete Numerology Dashboard</h1>
-            <div class="subtitle">Discover Your Life Path, Destiny, Soul Urge, Personality & Personal Year Numbers</div>
+<div class="cosmic-container">
+    <div class="stellar-header">
+        <div class="glyph-container">
+            <span class="glyph">🌀</span>
+            <span class="glyph">👁️</span>
+            <span class="glyph">🌀</span>
         </div>
-        
-        <!-- Input Section -->
-        <div class="input-card">
-            <div class="input-grid">
-                <div class="input-group">
-                    <label>📅 Full Birth Date</label>
-                    <input type="date" id="birthDate" value="1990-07-08">
-                </div>
-                <div class="input-group">
-                    <label>📝 Full Birth Name</label>
-                    <input type="text" id="fullName" placeholder="e.g., John William Smith" value="John William Smith">
-                    <div class="helper-text">As it appears on your birth certificate</div>
-                </div>
-                <div class="input-group">
-                    <label>📆 Target Year (Personal Year)</label>
-                    <input type="number" id="targetYear" placeholder="2024" min="1900" max="2100" value="2024">
-                    <div class="helper-text">Click "Use Current Year" below</div>
-                </div>
+        <h1>LIFE PATH·ARCHETYPE</h1>
+        <div class="subtitle"><span>✦</span> THE COMPLETE NUMEROLOGICAL GRIMOIRE <span>✦</span></div>
+    </div>
+
+    <div class="oracle-card">
+        <div class="input-grid">
+            <div class="field-group">
+                <label><span class="icon-symbol">⦿</span> BIRTH DATE</label>
+                <input type="date" id="birthDate" value="1985-10-23">
             </div>
-            
+            <div class="field-group">
+                <label><span class="icon-symbol">⛉</span> FULL BIRTH NAME</label>
+                <input type="text" id="fullName" placeholder="e.g., ALEXANDER THORNE" value="ALEXANDER THORNE">
+            </div>
             <div class="button-group">
-                <button class="primary-btn" onclick="calculateAllNumbers()">✨ Calculate My Numbers</button>
-                <button class="secondary-btn" onclick="setCurrentYear()">📌 Use Current Year</button>
+                <button class="primary-btn" onclick="revealPath()">CALCULATE</button>
+                <button class="secondary-btn" onclick="useCurrentYear()">USE CURRENT YEAR</button>
             </div>
-        </div>
-        
-        <!-- Dashboard Grid -->
-        <div class="dashboard" id="dashboard">
-            <!-- Life Path Card -->
-            <div class="number-card life-path card1" onclick="showDetails('lifePath')">
-                <div class="card-header">
-                    <span class="card-title">🌟 Life Path</span>
-                    <span class="card-icon">🛤️</span>
-                </div>
-                <div class="number-display" id="displayLifePath">-</div>
-                <div id="lifePathMaster" class="master-badge" style="display: none;">Master Number</div>
-                <div class="card-meaning" id="lifePathShort"></div>
-                <div class="view-details">Click for details →</div>
-            </div>
-            
-            <!-- Destiny Card -->
-            <div class="number-card destiny card2" onclick="showDetails('destiny')">
-                <div class="card-header">
-                    <span class="card-title">⭐ Destiny</span>
-                    <span class="card-icon">🎯</span>
-                </div>
-                <div class="number-display" id="displayDestiny">-</div>
-                <div id="destinyMaster" class="master-badge" style="display: none;">Master Number</div>
-                <div class="card-meaning" id="destinyShort"></div>
-                <div class="view-details">Click for details →</div>
-            </div>
-            
-            <!-- Soul Urge Card -->
-            <div class="number-card soul card3" onclick="showDetails('soul')">
-                <div class="card-header">
-                    <span class="card-title">💖 Soul Urge</span>
-                    <span class="card-icon">🔮</span>
-                </div>
-                <div class="number-display" id="displaySoul">-</div>
-                <div id="soulMaster" class="master-badge" style="display: none;">Master Number</div>
-                <div class="card-meaning" id="soulShort"></div>
-                <div class="view-details">Click for details →</div>
-            </div>
-            
-            <!-- Personality Card -->
-            <div class="number-card personality card4" onclick="showDetails('personality')">
-                <div class="card-header">
-                    <span class="card-title">🎭 Personality</span>
-                    <span class="card-icon">👥</span>
-                </div>
-                <div class="number-display" id="displayPersonality">-</div>
-                <div id="personalityMaster" class="master-badge" style="display: none;">Master Number</div>
-                <div class="card-meaning" id="personalityShort"></div>
-                <div class="view-details">Click for details →</div>
-            </div>
-            
-            <!-- Personal Year Card -->
-            <div class="number-card personal-year card5" onclick="showDetails('personalYear')">
-                <div class="card-header">
-                    <span class="card-title">📆 Personal Year</span>
-                    <span class="card-icon">📅</span>
-                </div>
-                <div class="number-display" id="displayPersonalYear">-</div>
-                <div id="personalYearMaster" class="master-badge" style="display: none;">Master Number</div>
-                <div class="card-meaning" id="personalYearShort"></div>
-                <div class="view-details">Click for details →</div>
-            </div>
-        </div>
-        
-        <!-- Expanded Details Section -->
-        <div class="details-section" id="detailsSection">
-            <div class="details-header">
-                <span class="details-title" id="detailsTitle"></span>
-                <button class="close-btn" onclick="hideDetails()">✕</button>
-            </div>
-            <div id="calculationBox" class="calculation-box"></div>
-            <div id="fullMeaning" class="full-meaning"></div>
-        </div>
-        
-        <!-- Summary Card -->
-        <div class="summary-card">
-            <div class="summary-title">📊 Your Numerology Profile</div>
-            <div class="summary-grid">
-                <div class="summary-item">
-                    <div class="summary-label">Life Path</div>
-                    <div class="summary-number" id="summaryLifePath">-</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Destiny</div>
-                    <div class="summary-number" id="summaryDestiny">-</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Soul Urge</div>
-                    <div class="summary-number" id="summarySoul">-</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Personality</div>
-                    <div class="summary-number" id="summaryPersonality">-</div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-label">Personal Year</div>
-                    <div class="summary-number" id="summaryPersonalYear">-</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>Pythagorean Numerology • Master Numbers: 11, 22, 33</p>
         </div>
     </div>
 
-    <script>
-        // ==================== UTILITY FUNCTIONS ====================
-        
-        // Pythagorean letter-to-number mapping
-        const letterValues = {
-            'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8, 'I': 9,
-            'J': 1, 'K': 2, 'L': 3, 'M': 4, 'N': 5, 'O': 6, 'P': 7, 'Q': 8, 'R': 9,
-            'S': 1, 'T': 2, 'U': 3, 'V': 4, 'W': 5, 'X': 6, 'Y': 7, 'Z': 8
-        };
-        
-        const vowels = ['A', 'E', 'I', 'O', 'U'];
-        
-        function reduceNumber(num) {
-            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
-                num = String(num).split('').reduce((a, b) => a + parseInt(b), 0);
-            }
-            return num;
+    <div id="dashboard" class="revelation-dashboard">
+        <!-- dynamically filled -->
+    </div>
+    <div class="cosmic-footer">
+        <div>🌀  ARCHETYPAL BLUEPRINT · ACCURATE AS THE STARS  👁️</div>
+        <div class="footnote">based on Pythagorean · Wilk · Goodwin traditions</div>
+    </div>
+</div>
+
+<script>
+    // --------------------------------------------------------------
+    // CORE CALCULATIONS (from Pythagorean / Wilk / Goodwin)
+    // --------------------------------------------------------------
+    function reduceToDigit(num, respectMaster = true) {
+        if (respectMaster && (num === 11 || num === 22 || num === 33)) return num;
+        while (num > 9 && !(respectMaster && (num === 11 || num === 22 || num === 33))) {
+            num = String(num).split('').reduce((a,b) => a + parseInt(b), 0);
         }
-        
-        function reduceWithSteps(num, label) {
-            let steps = [];
-            let original = num;
-            
-            while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
-                const digits = String(num).split('');
-                const sum = digits.reduce((a, b) => a + parseInt(b), 0);
-                steps.push(`${num} → ${digits.join('+')} = ${sum}`);
-                num = sum;
-            }
-            
-            if (steps.length === 0) {
-                steps.push(`${original} is already ${original > 9 ? 'a master number' : 'a single digit'}`);
-            }
-            
-            return { number: num, steps };
+        return num;
+    }
+
+    function calculateLifePath(birthDate) {
+        let [year, month, day] = birthDate.split('-').map(n => parseInt(n,10));
+        // month: already number, day: number
+        let monthVal = month;  // no reduction until summing
+        let dayVal = day;
+        let yearVal = year;
+        // reduce each component to single digit / master
+        let mRed = reduceToDigit(monthVal);
+        let dRed = reduceToDigit(dayVal);
+        let yRed = reduceToDigit(yearVal);
+        let total = mRed + dRed + yRed;
+        return reduceToDigit(total);
+    }
+
+    // ----- ARCHETYPE MASTER DATABASE (synthesized from both texts) -----
+    const lifePathData = {
+        1: {
+            name: "THE PIONEER · INDIVIDUATOR",
+            centralFocus: "Learn the power of self‑reliance and individuation. Your soul chose to establish independence, to lead, and to forge new paths. Attainment comes through courage and standing alone.",
+            vibration: "primal · assertive · initiating",
+            positiveTraits: ["independent", "original thinker", "courageous", "strong will", "executive ability"],
+            negativeTraits: ["domineering", "self‑centered", "arrogant", "impatient", "dictatorial"],
+            strengths: "Unmatched ability to start, to conceive, to pioneer. Natural leader. Strong executive potential.",
+            weaknesses: "Can crush others' ideas; difficulty delegating; may confuse independence with selfishness.",
+            career: "Entrepreneur, CEO, inventor, surgeon, military leader, creative director.",
+            passions: "Pioneering projects, physical challenges, mastering skills, being first.",
+            relationships: "Needs partner who respects his autonomy. Attracted to strong but supportive types. Must avoid power struggles.",
+            secretSelf: "Longs to be recognized as unique, yet secretly craves approval from those he respects.",
+            askedOfYou: "To develop courage; to initiate without trampling; to express individuality without egotism.",
+            compatibility: "Harmonious with 3,5,7; challenged by 2,4,6.",
+            element: "Fire",
+            color: "Red",
+            tarot: "The Magician",
+            chakra: "Root",
+            gem: "Carnelian",
+            planetary: "Sun",
+            expression: "You're here to become yourself completely, then lead others by example."
+        },
+        2: {
+            name: "THE DIPLOMAT · RELATER",
+            centralFocus: "Learn cooperation, sensitivity, and the art of relationship. Your soul chose to understand duality, partnership, and harmony.",
+            vibration: "receptive · diplomatic · intuitive",
+            positiveTraits: ["cooperative", "sensitive", "mediator", "patient", "intuitive"],
+            negativeTraits: ["over‑sensitive", "indecisive", "subservient", "manipulative", "dependent"],
+            strengths: "Deep intuition about people; ability to unite; calm during conflict; detail‑oriented.",
+            weaknesses: "Can absorb others' emotions; difficulty saying no; may lose self in relationships.",
+            career: "Counselor, diplomat, HR specialist, musician, partner in business, mediator.",
+            passions: "Creating harmony, deep conversations, art, nature, intimate friendships.",
+            relationships: "Seeks soul‑mate connection. Gives much, needs emotional safety. Avoids conflict at all costs.",
+            secretSelf: "Quietly yearns to be pursued, adored, and understood without words.",
+            askedOfYou: "To develop patience; to balance giving/receiving; to trust your intuition in relationships.",
+            compatibility: "Harmonious with 4,6,8; challenged with 1,5,7.",
+            element: "Water",
+            color: "Orange",
+            tarot: "High Priestess",
+            chakra: "Sacral",
+            gem: "Moonstone",
+            planetary: "Moon",
+            expression: "You are here to learn that love is the highest frequency; relationships are your temple."
+        },
+        3: {
+            name: "THE CREATOR · COMMUNICATOR",
+            centralFocus: "Learn self‑expression, joy, and creativity. Your soul chose to channel beauty, words, and inspiration.",
+            vibration: "expressive · enthusiastic · artistic",
+            positiveTraits: ["creative", "inspiring", "social", "optimistic", "eloquent"],
+            negativeTraits: ["scattered", "superficial", "dramatic", "critical", "unfocused"],
+            strengths: "Gift with words, art, or performance. Infectious enthusiasm. Lifts group morale.",
+            weaknesses: "May start many projects, finish few. Can be too thin‑skinned. Avoids discipline.",
+            career: "Writer, actor, designer, musician, public speaker, comedian, teacher.",
+            passions: "Creating, performing, socializing, beauty, travel for inspiration.",
+            relationships: "Needs partner who appreciates his spark, gives space to create, and enjoys social life.",
+            secretSelf: "Deep down fears being ordinary; hopes his art will outlive him.",
+            askedOfYou: "To use your voice; to create without fear; to bring joy even in darkness.",
+            compatibility: "Harmonious with 1,5,9; challenged with 4,7,8.",
+            element: "Fire",
+            color: "Yellow",
+            tarot: "The Empress",
+            chakra: "Solar Plexus",
+            gem: "Citrine",
+            planetary: "Jupiter",
+            expression: "You are here to turn life into art and remind others of the joy of being."
+        },
+        4: {
+            name: "THE BUILDER · GROUNDER",
+            centralFocus: "Learn discipline, order, and service through limitations. Your soul chose to build foundations that last.",
+            vibration: "stable · practical · diligent",
+            positiveTraits: ["disciplined", "reliable", "hard worker", "organized", "loyal"],
+            negativeTraits: ["rigid", "stubborn", "workaholic", "pessimistic", "controlling"],
+            strengths: "Turns vision into reality. Manages details. Unshakable dependability.",
+            weaknesses: "Resists change; can get trapped in routine; difficulty seeing the big picture.",
+            career: "Architect, engineer, accountant, manager, farmer, craftsman, surgeon.",
+            passions: "Building, fixing, organizing, nature, systems, traditions.",
+            relationships: "Seeks stability; loyal but may appear cold. Needs partner who respects his need for order.",
+            secretSelf: "Secretly wants to break free and be irresponsible—just once.",
+            askedOfYou: "To build something useful; to serve without losing yourself; to respect limits as teachers.",
+            compatibility: "Harmonious with 2,6,8; challenged with 1,3,5.",
+            element: "Earth",
+            color: "Green",
+            tarot: "The Emperor",
+            chakra: "Heart",
+            gem: "Jade",
+            planetary: "Saturn",
+            expression: "You are the spine of civilization; your work holds the world together."
+        },
+        5: {
+            name: "THE FREEDOM‑SEEKER · EXPERIENCER",
+            centralFocus: "Learn constructive freedom, adaptability, and the wisdom of change. Your soul chose variety and expansion.",
+            vibration: "dynamic · versatile · curious",
+            positiveTraits: ["adaptable", "adventurous", "quick", "resourceful", "progressive"],
+            negativeTraits: ["restless", "unreliable", "excessive", "commitment‑phobe", "erratic"],
+            strengths: "Thrives in change; learns fast; connects ideas; magnetic personality.",
+            weaknesses: "Can overindulge (food, travel, risk). Difficulty with routine, may avoid responsibility.",
+            career: "Sales, travel industry, journalist, detective, entrepreneur, guide.",
+            passions: "Travel, new experiences, meeting people, learning, freedom.",
+            relationships: "Needs freedom; may avoid emotional depth. Attracted to exciting partners. Must learn commitment.",
+            secretSelf: "Fears being trapped; secretly wants someone to hold him—but not too tight.",
+            askedOfYou: "To use freedom wisely; to sample life without addiction; to grow through experience.",
+            compatibility: "Harmonious with 1,3,7; challenged with 2,4,6.",
+            element: "Air",
+            color: "Tan",
+            tarot: "The Hierophant",
+            chakra: "Throat",
+            gem: "Turquoise",
+            planetary: "Mercury",
+            expression: "You are here to taste everything and distill wisdom from the feast."
+        },
+        6: {
+            name: "THE GUARDIAN · NURTURER",
+            centralFocus: "Learn responsibility, love, and service. Your soul chose to be the pillar of family and community.",
+            vibration: "nurturing · responsible · compassionate",
+            positiveTraits: ["responsible", "loving", "protective", "healer", "balanced"],
+            negativeTraits: ["meddlesome", "martyr", "self‑sacrificing", "anxious", "rigid expectations"],
+            strengths: "Creates harmony; natural counselor; loyal friend; artistic sensitivity.",
+            weaknesses: "Takes on too much; may feel unappreciated; can become resentful.",
+            career: "Teacher, nurse, therapist, parent, artist, interior designer, counselor.",
+            passions: "Home, family, beauty, healing, teaching, community.",
+            relationships: "Devoted partner; wants to fix and heal. Needs appreciation; may mother/father the spouse.",
+            secretSelf: "Wishes someone would take care of him for a change.",
+            askedOfYou: "To give without losing yourself; to love unconditionally; to balance caring with self‑care.",
+            compatibility: "Harmonious with 2,4,9; challenged with 1,3,5.",
+            element: "Earth + Air",
+            color: "Blue",
+            tarot: "The Lovers",
+            chakra: "Third Eye",
+            gem: "Sapphire",
+            planetary: "Venus",
+            expression: "You are the heart of the home and the conscience of the community."
+        },
+        7: {
+            name: "THE SEEKER · SAGE",
+            centralFocus: "Learn analysis, introspection, and spiritual truth. Your soul chose to dive deep and find wisdom.",
+            vibration: "analytical · mystical · reserved",
+            positiveTraits: ["wise", "intuitive", "analytical", "perceptive", "philosophical"],
+            negativeTraits: ["isolated", "cynical", "secretive", "socially awkward", "distrustful"],
+            strengths: "Grasps hidden patterns; natural researcher; spiritual insight; deep thinker.",
+            weaknesses: "Can withdraw from life; difficulty with intimacy; may seem cold.",
+            career: "Scientist, philosopher, monk, detective, IT specialist, occultist, professor.",
+            passions: "Study, meditation, nature, puzzles, metaphysics, solitude.",
+            relationships: "Needs space; can be distant. Attracted to mystery. Must learn to share inner world.",
+            secretSelf: "Longs for soul communion but fears being known too well.",
+            askedOfYou: "To seek truth; to trust your intuition; to bring wisdom back to the world.",
+            compatibility: "Harmonious with 1,4,5; challenged with 2,3,8.",
+            element: "Water",
+            color: "Purple",
+            tarot: "The Chariot",
+            chakra: "Crown",
+            gem: "Amethyst",
+            planetary: "Neptune",
+            expression: "You are the lighthouse in the fog; your solitude fuels your light."
+        },
+        8: {
+            name: "THE MASTER · ACHIEVER",
+            centralFocus: "Learn material mastery, power, and abundance. Your soul chose to wield influence and build empires.",
+            vibration: "ambitious · authoritative · efficient",
+            positiveTraits: ["strategic", "executive", "confident", "generous", "visionary"],
+            negativeTraits: ["greedy", "power‑hungry", "materialistic", "ruthless", "overbearing"],
+            strengths: "Manages money, people, resources. Big‑picture thinker. Natural CEO.",
+            weaknesses: "May equate worth with wealth; can be obsessed with status.",
+            career: "CEO, financier, politician, real estate, entrepreneur, judge.",
+            passions: "Wealth, influence, quality, legacy, competition.",
+            relationships: "Attracted to success; may treat partner as asset. Needs loyalty and admiration.",
+            secretSelf: "Fears failure and poverty; secretly wants to be loved for himself, not his power.",
+            askedOfYou: "To master the material world without becoming its slave; to use power ethically.",
+            compatibility: "Harmonious with 2,4,6; challenged with 1,5,9.",
+            element: "Earth",
+            color: "Black/Gray",
+            tarot: "Strength",
+            chakra: "Root",
+            gem: "Garnet",
+            planetary: "Saturn",
+            expression: "You are here to prove that spirit and matter can coexist; build with integrity."
+        },
+        9: {
+            name: "THE HUMANITARIAN · WISE ONE",
+            centralFocus: "Learn selflessness, universal love, and completion. Your soul chose to serve and let go.",
+            vibration: "compassionate · philosophical · forgiving",
+            positiveTraits: ["generous", "tolerant", "idealistic", "artistic", "global minded"],
+            negativeTraits: ["martyr", "resentful", "unrealistic", "vague", "emotionally dramatic"],
+            strengths: "Sees the big picture; forgives deeply; natural philanthropist; creative.",
+            weaknesses: "Can neglect self; may feel unappreciated; difficulty with boundaries.",
+            career: "Non‑profit, artist, teacher, healer, humanitarian, philosopher.",
+            passions: "Helping, art, travel, spiritual quests, justice.",
+            relationships: "Gives immensely; attracts those who need help. Must learn to receive.",
+            secretSelf: "Yearns to be ordinary and just be loved, not needed.",
+            askedOfYou: "To give without expectation; to complete karmic cycles; to embrace all as family.",
+            compatibility: "Harmonious with 3,6,9; challenged with 1,4,8.",
+            element: "Fire",
+            color: "Gold",
+            tarot: "The Hermit",
+            chakra: "Crown",
+            gem: "Lapis Lazuli",
+            planetary: "Mars",
+            expression: "You are the closing chapter of a cycle; your compassion heals the world."
+        },
+        11: {
+            name: "MASTER NUMBER · THE VISIONARY",
+            centralFocus: "Learn illumination, intuition, and spiritual inspiration. Your soul operates on a higher frequency.",
+            vibration: "intuitive · inspirational · intense",
+            positiveTraits: ["prophetic", "idealistic", "magnetic", "creative", "spiritual guide"],
+            negativeTraits: ["nervous", "impractical", "aloof", "overwhelmed", "escapes reality"],
+            strengths: "Access to higher wisdom; inspires masses; visionary; artistic genius.",
+            weaknesses: "Can't handle mundane; tension; difficulty grounding.",
+            career: "Spiritual teacher, artist, counselor, inventor, mystic, guide.",
+            passions: "Spirituality, art, humanity, secrets, light.",
+            relationships: "Needs partner who respects his mission. Intense connection, but may struggle with daily life.",
+            secretSelf: "Fears he is too much for this world; longs for earthly simplicity.",
+            askedOfYou: "To bring heaven to earth; to inspire without ego; to ground your light.",
+            compatibility: "Harmonious with 2,7,9; challenged with 4,8.",
+            element: "Air",
+            color: "Pink",
+            tarot: "Justice",
+            chakra: "Third Eye",
+            gem: "Lapis",
+            planetary: "Uranus",
+            expression: "You are the messenger; your life is the sermon."
+        },
+        22: {
+            name: "MASTER NUMBER · THE MASTER BUILDER",
+            centralFocus: "Learn to manifest grand visions for humanity. Combine spiritual insight with practical power.",
+            vibration: "powerful · constructive · global",
+            positiveTraits: ["visionary", "practical", "organizer", "monumental", "leader"],
+            negativeTraits: ["arrogant", "exploitative", "burned out", "misuse of power"],
+            strengths: "Builds empires, systems, institutions. Turns dreams into reality.",
+            weaknesses: "Enormous pressure; can become dictatorial; tension.",
+            career: "World‑changing entrepreneur, political leader, architect, philanthropist.",
+            passions: "Legacy, scale, humanity, mastery, creation.",
+            relationships: "Must find equal; partnership as a merger of visions. Intense but may neglect intimacy.",
+            secretSelf: "Secretly fears he will waste his potential; wants to be remembered.",
+            askedOfYou: "To build what only you can imagine; to serve the many, not the few.",
+            compatibility: "Harmonious with 4,6,8; challenged with 1,3.",
+            element: "Water",
+            color: "Brown",
+            tarot: "The Fool",
+            chakra: "All",
+            gem: "Coral",
+            planetary: "Uranus",
+            expression: "You are here to reshape reality; your hands are guided by the divine."
+        },
+        33: {
+            name: "MASTER NUMBER · THE MASTER TEACHER",
+            centralFocus: "Learn unconditional love and universal healing. Your soul is here to elevate consciousness.",
+            vibration: "compassionate · healing · selfless",
+            positiveTraits: ["healer", "teacher", "self‑sacrificing", "divine love", "forgiving"],
+            negativeTraits: ["martyr complex", "unrealistic expectations", "over‑giving", "resentment"],
+            strengths: "Heals with presence; teaches by example; embodies love.",
+            weaknesses: "Can be taken advantage of; may forget self.",
+            career: "Healer, spiritual leader, teacher, artist, therapist.",
+            passions: "Love, teaching, children, nature, humanity.",
+            relationships: "Total devotion; may attract needy partners. Must learn boundaries.",
+            secretSelf: "Yearns for ordinary love, free of sacrifice.",
+            askedOfYou: "To teach through love; to heal without harming yourself; to embody compassion.",
+            compatibility: "Harmonious with 6,9,11; challenged with 1,4.",
+            element: "Fire",
+            color: "Crystal",
+            tarot: "Judgment",
+            chakra: "Heart + Crown",
+            gem: "Rose Quartz",
+            planetary: "Neptune",
+            expression: "You are the loving heart of the universe; your presence heals."
         }
-        
-        function isConsonant(letter, index, fullName) {
-            const upperLetter = letter.toUpperCase();
-            if (vowels.includes(upperLetter)) return false;
-            if (upperLetter === 'Y') return true; // Y as consonant
-            return true;
-        }
-        
-        // ==================== NUMBER CALCULATIONS ====================
-        
-        function calculateLifePath(birthDate) {
-            const [year, month, day] = birthDate.split('-').map(num => parseInt(num, 10));
-            const digits = birthDate.replace(/-/g, '').split('').map(Number);
-            const sum = digits.reduce((a, b) => a + b, 0);
-            return reduceWithSteps(sum, 'Life Path');
-        }
-        
-        function calculateNameNumbers(fullName) {
-            const cleanName = fullName.toUpperCase().replace(/\s+/g, ' ').trim();
-            let allValues = [];
-            let vowelValues = [];
-            let consonantValues = [];
-            let letterDetails = [];
-            
-            for (let i = 0; i < cleanName.length; i++) {
-                const char = cleanName[i];
-                if (char >= 'A' && char <= 'Z') {
-                    const value = letterValues[char];
-                    allValues.push(value);
-                    
-                    if (vowels.includes(char)) {
-                        vowelValues.push(value);
-                        letterDetails.push({ char, value, type: 'vowel' });
-                    } else {
-                        consonantValues.push(value);
-                        letterDetails.push({ char, value, type: 'consonant' });
-                    }
-                }
-            }
-            
-            const totalSum = allValues.reduce((a, b) => a + b, 0);
-            const vowelSum = vowelValues.reduce((a, b) => a + b, 0);
-            const consonantSum = consonantValues.reduce((a, b) => a + b, 0);
-            
-            return {
-                destiny: reduceWithSteps(totalSum, 'Destiny'),
-                soul: reduceWithSteps(vowelSum, 'Soul Urge'),
-                personality: reduceWithSteps(consonantSum, 'Personality'),
-                letterDetails
-            };
-        }
-        
-        function calculatePersonalYear(birthDate, targetYear) {
-            const [year, month, day] = birthDate.split('-').map(num => parseInt(num, 10));
-            
-            const monthReduced = reduceNumber(month);
-            const dayReduced = reduceNumber(day);
-            const yearDigits = String(targetYear).split('').map(Number);
-            const yearSum = yearDigits.reduce((a, b) => a + b, 0);
-            const yearReduced = reduceNumber(yearSum);
-            
-            const total = monthReduced + dayReduced + yearReduced;
-            const result = reduceWithSteps(total, 'Personal Year');
-            
-            return {
-                ...result,
-                monthReduced,
-                dayReduced,
-                yearReduced,
-                targetYear
-            };
-        }
-        
-        // ==================== MEANINGS ====================
-        
-        function getShortMeaning(number, type) {
-            const meanings = {
-                lifePath: {
-                    1: "The Leader: Independent, ambitious, innovative.",
-                    2: "The Diplomat: Cooperative, sensitive, intuitive.",
-                    3: "The Creative: Expressive, optimistic, social.",
-                    4: "The Builder: Practical, disciplined, reliable.",
-                    5: "The Adventurer: Free-spirited, versatile, progressive.",
-                    6: "The Nurturer: Responsible, compassionate, protective.",
-                    7: "The Seeker: Analytical, introspective, spiritual.",
-                    8: "The Achiever: Ambitious, efficient, goal-oriented.",
-                    9: "The Humanitarian: Compassionate, generous, wise.",
-                    11: "The Visionary: Highly intuitive, inspirational.",
-                    22: "The Master Builder: Visionary with practical power.",
-                    33: "The Master Teacher: Unconditional love and healing."
-                },
-                destiny: {
-                    1: "Pioneer, leader, original thinker.",
-                    2: "Peacemaker, mediator, sensitive soul.",
-                    3: "Creative communicator, artist, optimist.",
-                    4: "Organizer, builder, practical worker.",
-                    5: "Freedom seeker, adventurer, versatile.",
-                    6: "Caregiver, teacher, responsible healer.",
-                    7: "Truth seeker, analyst, philosopher.",
-                    8: "Executive, manager, material master.",
-                    9: "Humanitarian, healer, global citizen.",
-                    11: "Spiritual messenger, inspirational teacher.",
-                    22: "Visionary builder, large-scale achiever.",
-                    33: "Divine teacher, unconditional love."
-                },
-                soul: {
-                    1: "Desires independence, recognition, originality.",
-                    2: "Craves harmony, partnership, peace.",
-                    3: "Yearns for self-expression, joy, creativity.",
-                    4: "Needs security, order, stability.",
-                    5: "Wants freedom, adventure, variety.",
-                    6: "Desires to love, serve, nurture.",
-                    7: "Seeks truth, wisdom, understanding.",
-                    8: "Craves success, power, abundance.",
-                    9: "Yearns to serve, heal, complete.",
-                    11: "Seeks spiritual truth and inspiration.",
-                    22: "Desires to build something lasting.",
-                    33: "Wants to heal and teach universally."
-                },
-                personality: {
-                    1: "Seen as confident, independent, strong.",
-                    2: "Seen as gentle, cooperative, friendly.",
-                    3: "Seen as charming, social, expressive.",
-                    4: "Seen as reliable, serious, practical.",
-                    5: "Seen as energetic, adventurous, magnetic.",
-                    6: "Seen as warm, responsible, caring.",
-                    7: "Seen as mysterious, intelligent, reserved.",
-                    8: "Seen as powerful, successful, authoritative.",
-                    9: "Seen as wise, compassionate, worldly.",
-                    11: "Seen as inspiring, intense, spiritual.",
-                    22: "Seen as capable, powerful, visionary.",
-                    33: "Seen as loving, wise, selfless."
-                },
-                personalYear: {
-                    1: "New beginnings, fresh starts, independence.",
-                    2: "Patience, partnerships, waiting.",
-                    3: "Creativity, socializing, self-expression.",
-                    4: "Hard work, building foundations, discipline.",
-                    5: "Change, freedom, adventure.",
-                    6: "Family, responsibility, healing.",
-                    7: "Reflection, rest, inner wisdom.",
-                    8: "Abundance, achievement, power.",
-                    9: "Completion, release, transformation.",
-                    11: "Spiritual awakening, intuition, inspiration.",
-                    22: "Manifesting dreams, building legacy.",
-                    33: "Teaching, healing, unconditional love."
-                }
-            };
-            
-            return meanings[type]?.[number] || "Unique energy combination.";
-        }
-        
-        function getFullMeaning(number, type) {
-            const meanings = {
-                lifePath: {
-                    1: "🌟 <strong>LIFE PATH 1: THE LEADER</strong><br><br>You're here to be independent, innovative, and assertive. Your journey involves developing self-reliance, courage, and the ability to stand alone. You have the potential to be a pioneer, inventor, or leader in your field. Challenges include learning to cooperate with others without losing your individuality. Success comes when you trust your instincts and forge your own path.",
-                    
-                    2: "🤝 <strong>LIFE PATH 2: THE DIPLOMAT</strong><br><br>You're here to be a peacemaker, mediator, and sensitive soul. Your journey involves developing patience, tact, and the ability to work with others. You have a gift for seeing both sides and creating harmony. Challenges include overcoming insecurity and learning to assert yourself. Success comes through partnerships and cooperation.",
-                    
-                    3: "🎨 <strong>LIFE PATH 3: THE CREATIVE</strong><br><br>You're here to express yourself creatively and bring joy to others. Your journey involves developing your communication skills, imagination, and optimism. You have the potential to inspire through words, art, or performance. Challenges include staying focused and avoiding scattering your talents. Success comes when you share your unique voice with the world.",
-                    
-                    4: "🏛️ <strong>LIFE PATH 4: THE BUILDER</strong><br><br>You're here to create solid foundations and bring order to the world. Your journey involves developing discipline, practicality, and reliability. You have the ability to build systems and structures that last. Challenges include being too rigid or getting stuck in routine. Success comes through hard work and attention to detail.",
-                    
-                    5: "🦋 <strong>LIFE PATH 5: THE ADVENTURER</strong><br><br>You're here to experience freedom, change, and variety. Your journey involves embracing your versatility and love of adventure. You have the gift of adaptability and the ability to inspire others to break free. Challenges include commitment and finding stability. Success comes when you use your freedom wisely.",
-                    
-                    6: "💖 <strong>LIFE PATH 6: THE NURTURER</strong><br><br>You're here to serve, heal, and take responsibility. Your journey involves learning to care for others while maintaining balance. You have the gift of creating harmony and beauty. Challenges include taking on too much and neglecting yourself. Success comes through service and teaching.",
-                    
-                    7: "🔮 <strong>LIFE PATH 7: THE SEEKER</strong><br><br>You're here to seek truth, wisdom, and understanding. Your journey involves developing your analytical mind and spiritual awareness. You have the gift of deep insight and intuition. Challenges include isolation and becoming too critical. Success comes when you share your discoveries with others.",
-                    
-                    8: "💰 <strong>LIFE PATH 8: THE ACHIEVER</strong><br><br>You're here to achieve material success and demonstrate mastery. Your journey involves developing your business acumen and leadership abilities. You have the gift of manifesting abundance. Challenges include handling power and balancing material with spiritual values. Success comes through wise use of resources.",
-                    
-                    9: "🌍 <strong>LIFE PATH 9: THE HUMANITARIAN</strong><br><br>You're here to serve humanity and embrace universal love. Your journey involves letting go of the personal to embrace the global. You have the gift of compassion and wisdom. Challenges include setting boundaries and dealing with loss. Success comes through service and forgiveness.",
-                    
-                    11: "⚡ <strong>MASTER LIFE PATH 11: THE VISIONARY</strong><br><br>You're here as a spiritual messenger and inspirer. Your journey involves developing your intuition and bringing spiritual insights to the world. You have heightened sensitivity and awareness. Challenges include managing your intensity and grounding your visions. Success comes when you trust your inner knowing and inspire others.",
-                    
-                    22: "🏗️ <strong>MASTER LIFE PATH 22: THE MASTER BUILDER</strong><br><br>You're here to manifest grand visions that benefit humanity. Your journey combines spiritual insight with practical action. You have the potential to create lasting institutions and systems. Challenges include handling the enormous responsibility and pressure. Success comes when you build something that serves the greater good.",
-                    
-                    33: "💝 <strong>MASTER LIFE PATH 33: THE MASTER TEACHER</strong><br><br>You're here to embody unconditional love and divine wisdom. Your journey is about teaching, healing, and uplifting humanity. You have the potential to be a great spiritual teacher or healer. Challenges include immense self-sacrifice and maintaining boundaries. Success comes through demonstrating that love is the most powerful force."
-                },
-                destiny: {
-                    1: "🌟 <strong>DESTINY 1: THE PIONEER</strong><br><br>Your destiny is to lead and innovate. You have natural leadership abilities and original ideas. You're meant to forge new paths and inspire others through your independence and courage. Careers in entrepreneurship, leadership, or any field where you can be at the forefront suit you perfectly.",
-                    
-                    2: "🤝 <strong>DESTINY 2: THE DIPLOMAT</strong><br><br>Your destiny is to build bridges and create harmony. You have natural gifts for cooperation, mediation, and partnership. You're meant to bring people together and create peace. Careers in counseling, diplomacy, or any field requiring tact and sensitivity suit you.",
-                    
-                    3: "🎨 <strong>DESTINY 3: THE CREATOR</strong><br><br>Your destiny is to express yourself creatively and inspire others. You have natural gifts in communication, art, and self-expression. You're meant to bring joy and beauty into the world. Careers in writing, performing, or any creative field suit you.",
-                    
-                    4: "🏛️ <strong>DESTINY 4: THE BUILDER</strong><br><br>Your destiny is to create order and build lasting foundations. You have natural gifts for organization, practicality, and hard work. You're meant to create systems and structures that benefit others. Careers in management, engineering, or any field requiring methodical work suit you.",
-                    
-                    5: "🦋 <strong>DESTINY 5: THE ADVENTURER</strong><br><br>Your destiny is to embrace freedom and inspire change. You have natural gifts for adaptability, communication, and experiencing life fully. You're meant to explore and bring new ideas to others. Careers in travel, media, or any dynamic field suit you.",
-                    
-                    6: "💖 <strong>DESTINY 6: THE NURTURER</strong><br><br>Your destiny is to serve, heal, and create harmony. You have natural gifts for responsibility, compassion, and teaching. You're meant to care for others and create beauty. Careers in teaching, counseling, healthcare, or any service field suit you.",
-                    
-                    7: "🔍 <strong>DESTINY 7: THE SEEKER</strong><br><br>Your destiny is to seek truth and share wisdom. You have natural gifts for analysis, research, and spiritual insight. You're meant to delve deep into life's mysteries. Careers in science, research, or spirituality suit you.",
-                    
-                    8: "💰 <strong>DESTINY 8: THE ACHIEVER</strong><br><br>Your destiny is to achieve material success and demonstrate mastery. You have natural gifts for business, leadership, and manifestation. You're meant to take on significant responsibility. Careers in business, finance, or executive roles suit you.",
-                    
-                    9: "🌍 <strong>DESTINY 9: THE HUMANITARIAN</strong><br><br>Your destiny is to serve humanity on a broad scale. You have natural gifts for compassion, wisdom, and seeing the big picture. You're meant to let go of the personal and embrace the universal. Careers in non-profits, healing arts, or teaching suit you.",
-                    
-                    11: "⚡ <strong>MASTER DESTINY 11: THE VISIONARY</strong><br><br>Your destiny is to be an illuminator and spiritual inspirer. You have heightened intuition and access to higher wisdom. You're meant to bring spiritual insights to the material world. Your path requires balancing the spiritual and practical.",
-                    
-                    22: "🏛️ <strong>MASTER DESTINY 22: THE MASTER BUILDER</strong><br><br>Your destiny is to manifest grand visions that benefit humanity. You combine intuition with practical building ability. You have the potential to create lasting institutions. Your challenge is handling enormous responsibility.",
-                    
-                    33: "💝 <strong>MASTER DESTINY 33: THE MASTER TEACHER</strong><br><br>Your destiny is to embody unconditional love and divine wisdom. You're here to teach, heal, and uplift humanity through pure compassion. You have the potential to be a great spiritual teacher touching countless lives."
-                },
-                soul: {
-                    1: "🌟 <strong>SOUL URGE 1: INDEPENDENCE</strong><br><br>Your soul craves to be independent, original, and recognized. You need to carve your own path and stand out. Deep down, you want to achieve, innovate, and be admired for your unique contributions. You're driven by a need to prove yourself and be number one.",
-                    
-                    2: "💞 <strong>SOUL URGE 2: HARMONY</strong><br><br>Your soul yearns for peace, partnership, and connection. You're motivated by a deep need to create balance and be loved. You thrive when cooperating and being of service. Your heart craves meaningful relationships and emotional security.",
-                    
-                    3: "🎨 <strong>SOUL URGE 3: CREATIVITY</strong><br><br>Your soul desires creative expression, joy, and communication. You're here to inspire others through your words or art. Your heart craves social connection, optimism, and the freedom to express your playful nature. You need to be heard and appreciated.",
-                    
-                    4: "🏛️ <strong>SOUL URGE 4: SECURITY</strong><br><br>Your soul craves security, order, and stability. You're driven to build solid foundations. Your heart desires the satisfaction of creating something lasting and reliable. You need to feel grounded and in control of your environment.",
-                    
-                    5: "🦋 <strong>SOUL URGE 5: FREEDOM</strong><br><br>Your soul craves freedom, adventure, and change. You need variety and new experiences to feel alive. Your heart desires exploration, taking risks, and breaking free from limitations. You're here to experience life in all its diversity.",
-                    
-                    6: "👪 <strong>SOUL URGE 6: SERVICE</strong><br><br>Your soul craves to love, serve, and heal others. You're driven by responsibility and a need to create harmony. Your heart desires to be needed and to make a positive difference. You find fulfillment in nurturing and protecting.",
-                    
-                    7: "🔮 <strong>SOUL URGE 7: TRUTH</strong><br><br>Your soul yearns for truth, wisdom, and understanding. You need time alone to delve into life's mysteries. Your deepest desire is to know the unknown and find meaning beyond the surface. You're driven by a need for spiritual connection.",
-                    
-                    8: "💰 <strong>SOUL URGE 8: ACHIEVEMENT</strong><br><br>Your soul craves success, recognition, and material abundance. You're driven to master the material world and achieve authority. Your heart desires the power to manifest your visions and leave a legacy.",
-                    
-                    9: "🌍 <strong>SOUL URGE 9: HUMANITARIANISM</strong><br><br>Your soul craves to serve humanity and make the world better. You're motivated by compassion and a global perspective. Your heart desires meaningful contribution and letting go of what no longer serves.",
-                    
-                    11: "🌟 <strong>MASTER SOUL URGE 11: INSPIRATION</strong><br><br>Your soul is highly intuitive and spiritually aware. You have a deep desire to illuminate truth and inspire others. Your heart craves mystical understanding and bringing higher wisdom down to earth.",
-                    
-                    22: "🏗️ <strong>MASTER SOUL URGE 22: MANIFESTATION</strong><br><br>Your soul combines vision with practical action. You have the potential to manifest grand dreams that benefit humanity. Your deepest desire is to create something of lasting significance.",
-                    
-                    33: "💗 <strong>MASTER SOUL URGE 33: UNIVERSAL LOVE</strong><br><br>Your heart embodies unconditional love and compassion. Your soul's purpose is to uplift humanity through teaching, healing, and selfless service. You're here to demonstrate the power of love."
-                },
-                personality: {
-                    1: "🌟 <strong>PERSONALITY 1: THE LEADER</strong><br><br>Others see you as confident, independent, and strong-willed. You project authority and self-reliance. People perceive you as someone who knows what they want and isn't afraid to go after it. You may come across as intimidating or aloof, but this outer confidence hides vulnerability.",
-                    
-                    2: "🤝 <strong>PERSONALITY 2: THE PEACEMAKER</strong><br><br>Others see you as gentle, diplomatic, and approachable. You project warmth and sensitivity that puts people at ease. People perceive you as a good listener and cooperative team player. You may come across as shy or indecisive, but you're actually carefully considering all sides.",
-                    
-                    3: "🎨 <strong>PERSONALITY 3: THE SOCIAL BUTTERFLY</strong><br><br>Others see you as charming, expressive, and fun-loving. You project enthusiasm that draws people to you. People perceive you as the life of the party, always optimistic and entertaining. You may come across as superficial, but there's depth beneath the social facade.",
-                    
-                    4: "🏛️ <strong>PERSONALITY 4: THE SOLID CITIZEN</strong><br><br>Others see you as reliable, practical, and hardworking. You project stability and trustworthiness. People perceive you as organized and disciplined, maybe even a bit serious. You may come across as rigid, but your consistency is your strength.",
-                    
-                    5: "🦋 <strong>PERSONALITY 5: THE FREE SPIRIT</strong><br><br>Others see you as adventurous, versatile, and magnetic. You project energy and a love for life that's contagious. People perceive you as spontaneous and exciting. You may come across as unreliable, but you're simply embracing life fully.",
-                    
-                    6: "💖 <strong>PERSONALITY 6: THE NURTURER</strong><br><br>Others see you as responsible, caring, and warm. You project a parental energy that makes people feel protected. People perceive you as someone who takes care of others. You may come across as interfering, but your intentions are loving.",
-                    
-                    7: "🔮 <strong>PERSONALITY 7: THE MYSTIC</strong><br><br>Others see you as mysterious, intelligent, and reserved. You project an air of wisdom that intrigues people. People perceive you as analytical and private. You may come across as distant, but you're simply processing deeply.",
-                    
-                    8: "💰 <strong>PERSONALITY 8: THE EXECUTIVE</strong><br><br>Others see you as powerful, ambitious, and successful. You project authority and confidence that commands respect. People perceive you as business-like and focused. You may come across as intimidating, but you're just driven.",
-                    
-                    9: "🌍 <strong>PERSONALITY 9: THE HUMANITARIAN</strong><br><br>Others see you as compassionate, wise, and worldly. You project a global awareness and depth of understanding. People perceive you as philosophical and accepting. You may come across as detached, but you've simply learned to let go.",
-                    
-                    11: "⚡ <strong>MASTER PERSONALITY 11: THE INSPIRER</strong><br><br>Others see you as intuitive, inspirational, and intense. You project a spiritual presence that's magnetic. People perceive you as visionary and deeply sensitive. You may come across as overwhelming, but you're channeling higher wisdom.",
-                    
-                    22: "🏗️ <strong>MASTER PERSONALITY 22: THE MASTER BUILDER</strong><br><br>Others see you as capable of achieving anything. You project enormous potential and practical vision. People perceive you as someone who can turn dreams into reality. You may come across as too ambitious, but you're here to build for humanity.",
-                    
-                    33: "💝 <strong>MASTER PERSONALITY 33: THE MASTER TEACHER</strong><br><br>Others see you as unconditionally loving and profoundly wise. You project a healing presence that transforms others. People perceive you as selfless and divinely guided. You may come across as too perfect, but you're demonstrating love in action."
-                },
-                personalYear: {
-                    1: "🌟 <strong>PERSONAL YEAR 1: NEW BEGINNINGS</strong><br><br>This is a year of fresh starts and new opportunities. Plant seeds for the next 9-year cycle. Be independent, assertive, and take initiative. Start new projects and embrace leadership roles. Things may feel slow at first, but by year's end, you'll see significant progress. Focus on independence, courage, innovation, and self-reliance.",
-                    
-                    2: "🤝 <strong>PERSONAL YEAR 2: PATIENCE & PARTNERSHIPS</strong><br><br>This is a year of cooperation, waiting, and building relationships. After Year 1's momentum, now be patient and observe. You'll be more sensitive and intuitive. Focus on partnerships, both personal and professional. Things move slowly – trust the process. Focus on patience, cooperation, intuition, and relationships.",
-                    
-                    3: "🎨 <strong>PERSONAL YEAR 3: CREATIVITY & SELF-EXPRESSION</strong><br><br>This is a year of joy, creativity, and social connection. You'll feel more optimistic and expressive. Share your ideas, be playful, and enjoy life. Creative projects flourish now. Social opportunities abound. Focus on self-expression, creativity, socializing, and optimism.",
-                    
-                    4: "🏗️ <strong>PERSONAL YEAR 4: HARD WORK & FOUNDATION</strong><br><br>This is a year of building solid foundations and working diligently. After Year 3's fun, now get serious. Focus on stability, organization, and practical matters. This is a year for hard work and discipline. You're building something lasting. Focus on discipline, organization, hard work, and stability.",
-                    
-                    5: "🦋 <strong>PERSONAL YEAR 5: FREEDOM & CHANGE</strong><br><br>This is a year of adventure, freedom, and unexpected changes. After Year 4's hard work, now break free. You'll feel restless and eager for new experiences. Travel, education, and variety call to you. Embrace change. Focus on freedom, adventure, change, and new experiences.",
-                    
-                    6: "💖 <strong>PERSONAL YEAR 6: FAMILY & RESPONSIBILITY</strong><br><br>This is a year of home, family, and responsibility. Focus shifts to relationships and domestic matters. You may take on caregiving roles or improve your home. Heal family dynamics and deepen commitments. Balance responsibilities with self-care. Focus on family, responsibility, healing, and service.",
-                    
-                    7: "🔮 <strong>PERSONAL YEAR 7: REFLECTION & INNER WISDOM</strong><br><br>This is a year of introspection, spiritual growth, and inner development. Go within, rest, and reflect. Study, research, and understand life's deeper meanings. You may feel more solitary – this is natural. Trust your intuition. Focus on introspection, spiritual growth, study, and inner wisdom.",
-                    
-                    8: "💰 <strong>PERSONAL YEAR 8: POWER & ABUNDANCE</strong><br><br>This is a year of achievement, financial abundance, and recognition. After Year 7's inner work, now manifest results. Focus on career, finances, and personal power. Lead, make important decisions, and reap rewards. Use power wisely. Focus on achievement, abundance, leadership, and recognition.",
-                    
-                    9: "🌍 <strong>PERSONAL YEAR 9: COMPLETION & RELEASE</strong><br><br>This is a year of endings, release, and transformation. The 9-year cycle completes – let go of what no longer serves. Endings in relationships, careers, or situations make space for new beginnings. Focus on compassion, service, and forgiveness. Focus on release, completion, service, and transformation.",
-                    
-                    11: "⚡ <strong>MASTER NUMBER 11: SPIRITUAL AWAKENING</strong><br><br>This is a year of heightened intuition, spiritual insight, and inspiration. The energy is intensified. Experience profound spiritual awareness, vivid dreams, and psychic gifts. Share your insights and inspire others. Focus on spiritual growth and service. Ground yourself through meditation and nature.",
-                    
-                    22: "🏛️ <strong>MASTER NUMBER 22: MASTER BUILDER YEAR</strong><br><br>This is a year of enormous potential for manifesting grand visions. Combine intuition with practical building. Turn dreams into reality and create something lasting. This could be a breakthrough year. Stay grounded – potential is immense, but so is pressure. Build something that serves the greater good.",
-                    
-                    33: "💝 <strong>MASTER NUMBER 33: MASTER TEACHER YEAR</strong><br><br>This is a year of unconditional love, healing, and service at the highest level. The 33 is the most evolved Master Number. Feel called to teach, heal, or serve profoundly. Give selflessly and embody divine love. Maintain boundaries while serving others. Focus on unconditional love, healing, teaching, and compassionate service."
-                }
-            };
-            
-            return meanings[type]?.[number] || "This number brings unique energies. Consult a numerology guide for detailed interpretation.";
-        }
-        
-        // ==================== DISPLAY FUNCTIONS ====================
-        
-        let currentResults = null;
-        
-        function calculateAllNumbers() {
-            const birthDate = document.getElementById('birthDate').value;
-            const fullName = document.getElementById('fullName').value.trim();
-            const targetYear = parseInt(document.getElementById('targetYear').value);
-            
-            if (!birthDate || !fullName || !targetYear) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // Calculate all numbers
-            const lifePath = calculateLifePath(birthDate);
-            const nameNumbers = calculateNameNumbers(fullName);
-            const personalYear = calculatePersonalYear(birthDate, targetYear);
-            
-            currentResults = {
-                lifePath,
-                destiny: nameNumbers.destiny,
-                soul: nameNumbers.soul,
-                personality: nameNumbers.personality,
-                personalYear,
-                letterDetails: nameNumbers.letterDetails
-            };
-            
-            // Update displays
-            updateDisplays(currentResults);
-            
-            // Hide details section if open
-            hideDetails();
-        }
-        
-        function updateDisplays(results) {
-            // Helper function to update card
-            function updateCard(displayId, masterId, shortId, number, type, isMaster) {
-                document.getElementById(displayId).textContent = number;
-                document.getElementById(masterId).style.display = isMaster ? 'block' : 'none';
-                document.getElementById(shortId).innerHTML = getShortMeaning(number, type);
-            }
-            
-            // Update cards
-            updateCard('displayLifePath', 'lifePathMaster', 'lifePathShort', 
-                      results.lifePath.number, 'lifePath', 
-                      [11,22,33].includes(results.lifePath.number));
-            
-            updateCard('displayDestiny', 'destinyMaster', 'destinyShort',
-                      results.destiny.number, 'destiny',
-                      [11,22,33].includes(results.destiny.number));
-            
-            updateCard('displaySoul', 'soulMaster', 'soulShort',
-                      results.soul.number, 'soul',
-                      [11,22,33].includes(results.soul.number));
-            
-            updateCard('displayPersonality', 'personalityMaster', 'personalityShort',
-                      results.personality.number, 'personality',
-                      [11,22,33].includes(results.personality.number));
-            
-            updateCard('displayPersonalYear', 'personalYearMaster', 'personalYearShort',
-                      results.personalYear.number, 'personalYear',
-                      [11,22,33].includes(results.personalYear.number));
-            
-            // Update summary
-            document.getElementById('summaryLifePath').textContent = results.lifePath.number;
-            document.getElementById('summaryDestiny').textContent = results.destiny.number;
-            document.getElementById('summarySoul').textContent = results.soul.number;
-            document.getElementById('summaryPersonality').textContent = results.personality.number;
-            document.getElementById('summaryPersonalYear').textContent = results.personalYear.number;
-        }
-        
-        function showDetails(type) {
-            if (!currentResults) {
-                alert('Please calculate your numbers first');
-                return;
-            }
-            
-            const detailsSection = document.getElementById('detailsSection');
-            const detailsTitle = document.getElementById('detailsTitle');
-            const calculationBox = document.getElementById('calculationBox');
-            const fullMeaning = document.getElementById('fullMeaning');
-            
-            let title = '';
-            let calculation = '';
-            let meaning = '';
-            let number = 0;
-            
-            switch(type) {
-                case 'lifePath':
-                    title = '🌟 Life Path Number';
-                    number = currentResults.lifePath.number;
-                    calculation = `Life Path Calculation:\n` +
-                                `Birth Date: ${document.getElementById('birthDate').value}\n` +
-                                `Step 1: Add all digits: ${currentResults.lifePath.steps.join('\n')}`;
-                    meaning = getFullMeaning(number, 'lifePath');
-                    break;
-                    
-                case 'destiny':
-                    title = '⭐ Destiny Number';
-                    number = currentResults.destiny.number;
-                    calculation = `Destiny Number Calculation:\n` +
-                                `Full Name: ${document.getElementById('fullName').value}\n` +
-                                `Step 1: Convert each letter to its number value\n` +
-                                `Step 2: Add all values: ${currentResults.destiny.steps.join('\n')}`;
-                    meaning = getFullMeaning(number, 'destiny');
-                    break;
-                    
-                case 'soul':
-                    title = '💖 Soul Urge Number';
-                    number = currentResults.soul.number;
-                    calculation = `Soul Urge Calculation:\n` +
-                                `Full Name: ${document.getElementById('fullName').value}\n` +
-                                `Step 1: Extract vowels only (A, E, I, O, U)\n` +
-                                `Step 2: Convert vowels to numbers and add: ${currentResults.soul.steps.join('\n')}`;
-                    meaning = getFullMeaning(number, 'soul');
-                    break;
-                    
-                case 'personality':
-                    title = '🎭 Personality Number';
-                    number = currentResults.personality.number;
-                    calculation = `Personality Number Calculation:\n` +
-                                `Full Name: ${document.getElementById('fullName').value}\n` +
-                                `Step 1: Extract consonants only (all letters except A,E,I,O,U)\n` +
-                                `Step 2: Convert consonants to numbers and add: ${currentResults.personality.steps.join('\n')}`;
-                    meaning = getFullMeaning(number, 'personality');
-                    break;
-                    
-                case 'personalYear':
-                    title = '📆 Personal Year Number';
-                    number = currentResults.personalYear.number;
-                    calculation = `Personal Year Calculation:\n` +
-                                `Birth Date: ${document.getElementById('birthDate').value}\n` +
-                                `Target Year: ${currentResults.personalYear.targetYear}\n` +
-                                `Step 1: Reduce birth month (${document.getElementById('birthDate').value.split('-')[1]}) → ${currentResults.personalYear.monthReduced}\n` +
-                                `Step 2: Reduce birth day (${document.getElementById('birthDate').value.split('-')[2]}) → ${currentResults.personalYear.dayReduced}\n` +
-                                `Step 3: Reduce target year (${currentResults.personalYear.targetYear}) → ${currentResults.personalYear.yearReduced}\n` +
-                                `Step 4: Add reduced numbers: ${currentResults.personalYear.monthReduced} + ${currentResults.personalYear.dayReduced} + ${currentResults.personalYear.yearReduced} = ${currentResults.personalYear.number}`;
-                    meaning = getFullMeaning(number, 'personalYear');
-                    break;
-            }
-            
-            detailsTitle.textContent = title + (number ? ` ${number}` : '');
-            calculationBox.textContent = calculation;
-            fullMeaning.innerHTML = meaning;
-            
-            detailsSection.classList.add('show');
-        }
-        
-        function hideDetails() {
-            document.getElementById('detailsSection').classList.remove('show');
-        }
-        
-        function setCurrentYear() {
-            document.getElementById('targetYear').value = new Date().getFullYear();
-            if (currentResults) {
-                calculateAllNumbers();
-            }
-        }
-        
-        // Calculate on page load
-        window.onload = function() {
-            calculateAllNumbers();
-        };
-    </script>
+    };
+
+    // ----- Helper: vibration fill % -----
+    function getVibrationWidth(number) {
+        const base = number > 9 ? [11,22,33].indexOf(number) !== -1 ? 95 : 70 : number * 10;
+        return Math.min(100, base);
+    }
+
+    // ----- UI UPDATE -----
+    function revealPath() {
+        const birthDate = document.getElementById('birthDate').value;
+        const fullName = document.getElementById('fullName').value.trim() || "ALEXANDER THORNE";
+        if (!birthDate) { alert("Enter birth date"); return; }
+
+        const lifeNumber = calculateLifePath(birthDate);
+        const data = lifePathData[lifeNumber] || lifePathData[1]; // fallback
+
+        const isMaster = [11,22,33].includes(lifeNumber);
+        const vibWidth = getVibrationWidth(lifeNumber);
+
+        const html = `
+            <div class="number-throne">
+                <div class="life-number-glow">
+                    <span class="life-number-label">LIFE PATH ARCHETYPE</span>
+                    <span class="life-number-value ${isMaster ? 'master' : ''}">${lifeNumber}</span>
+                </div>
+                <div class="vibration-meter">
+                    <div class="vibration-badge">${data.vibration}</div>
+                    <div class="vibration-bar"><div class="vibration-fill" style="width:${vibWidth}%"></div></div>
+                </div>
+            </div>
+
+            <div class="archetype-grid">
+                <div class="pillar-card">
+                    <div class="pillar-header"><span class="pillar-icon">✦</span><h3>CENTRAL FOCUS</h3></div>
+                    <div class="pillar-content">${data.centralFocus}</div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-header"><span class="pillar-icon">⛭</span><h3>CAREER · VOCATION</h3></div>
+                    <div class="pillar-content">${data.career}</div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-header"><span class="pillar-icon">🔥</span><h3>PASSIONS · FIRE</h3></div>
+                    <div class="pillar-content">${data.passions}</div>
+                </div>
+            </div>
+
+            <div class="duality-row">
+                <div class="duality-card strength">
+                    <div class="duality-title"><span class="pillar-icon">⬆</span> STRENGTHS · LIGHT</div>
+                    <ul class="duality-list">
+                        ${data.positiveTraits.map(t => `<li>${t}</li>`).join('')}
+                        <li>${data.strengths}</li>
+                    </ul>
+                </div>
+                <div class="duality-card weakness">
+                    <div class="duality-title"><span class="pillar-icon">⬇</span> WEAKNESSES · SHADOW</div>
+                    <ul class="duality-list">
+                        ${data.negativeTraits.map(t => `<li>${t}</li>`).join('')}
+                        <li>${data.weaknesses}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="depth-section">
+                <div class="secret-self">
+                    <div class="secret-header"><span class="pillar-icon">🌀</span><h3>SECRET SELF · INNER SANCTUM</h3></div>
+                    <div class="secret-content">${data.secretSelf}</div>
+                </div>
+                <div class="asked-pillar">
+                    <h3>🌀 WHAT IS ASKED OF YOU</h3>
+                    <div class="pillar-content">${data.askedOfYou}</div>
+                    <div style="margin-top:20px;"><span class="pillar-icon">👁️</span> expression: ${data.expression}</div>
+                </div>
+            </div>
+
+            <div class="sub-pillars">
+                <div class="minor-pillar">
+                    <h4>⚡ ELEMENT · COLOR · GEM</h4>
+                    <div>${data.element} · ${data.color} · ${data.gem}</div>
+                    <div style="margin-top:12px;">chakra: ${data.chakra}</div>
+                </div>
+                <div class="minor-pillar">
+                    <h4>🌐 RELATIONSHIP DYNAMICS</h4>
+                    <div>${data.relationships}</div>
+                    <div style="margin-top:12px;">compatibility: ${data.compatibility}</div>
+                </div>
+            </div>
+        `;
+
+        const dashboard = document.getElementById('dashboard');
+        dashboard.innerHTML = html;
+        dashboard.classList.add('visible');
+        window.scrollTo({ top: dashboard.offsetTop - 20, behavior: 'smooth' });
+    }
+
+    function useCurrentYear() {
+        // Not changing date, just scroll info
+        revealPath();
+    }
+
+    // initial load
+    window.onload = function() {
+        // prefill with a good example
+        document.getElementById('birthDate').value = "1985-10-23";
+        document.getElementById('fullName').value = "ALEXANDER THORNE";
+        revealPath();
+    };
+</script>
 </body>
 </html>
