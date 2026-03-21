@@ -13,7 +13,7 @@
         }
         
         body {
-            background: #030514;  /* deep space base */
+            background: #030514;
             min-height: 100vh;
             padding: 20px 15px;
             color: #e0e5f0;
@@ -21,7 +21,7 @@
             position: relative;
         }
         
-        /* TRUE STARRY BACKGROUND – multiple layers of moving stars */
+        /* TRUE STARRY BACKGROUND */
         body::before {
             content: "";
             position: fixed;
@@ -46,17 +46,6 @@
             animation: subtleTwinkle 8s infinite alternate;
         }
         
-        /* additional nebula glow */
-        body::after {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(ellipse at 30% 40%, rgba(40,60,120,0.25) 0%, transparent 50%),
-                        radial-gradient(ellipse at 80% 70%, rgba(80,50,140,0.2) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-        
         @keyframes subtleTwinkle {
             0% { opacity: 0.9; }
             100% { opacity: 1; }
@@ -70,7 +59,6 @@
             z-index: 2;
         }
         
-        /* Header with Logo */
         .stellar-header {
             margin-bottom: 30px;
             text-align: center;
@@ -105,10 +93,6 @@
             transition: filter 0.3s;
         }
         
-        .your-logo:hover {
-            filter: drop-shadow(0 0 30px rgba(100, 255, 150, 0.8));
-        }
-        
         .glyph-container {
             display: flex;
             justify-content: center;
@@ -139,9 +123,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 6px;
-            text-shadow: 0 0 40px rgba(100,140,255,0.4);
             line-height: 1.2;
-            word-break: break-word;
         }
         
         .subtitle {
@@ -150,7 +132,6 @@
             letter-spacing: clamp(2px, 1vw, 5px);
             color: #9aa9c9;
             text-transform: uppercase;
-            word-break: break-word;
         }
         
         .subtitle span {
@@ -158,16 +139,13 @@
             font-weight: 400;
         }
         
-        /* Input Card */
         .oracle-card {
             background: rgba(5, 10, 25, 0.8);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(140, 170, 255, 0.3);
             border-radius: 28px;
             padding: 30px 25px;
             margin-bottom: 40px;
-            box-shadow: 0 25px 45px -15px rgba(0,0,0,0.8);
         }
         
         .input-grid {
@@ -193,11 +171,6 @@
             gap: 6px;
         }
         
-        .field-group label .icon-symbol {
-            color: #c9adff;
-            font-size: 1.2rem;
-        }
-        
         .field-group input {
             background: rgba(10, 15, 30, 0.9);
             border: 1px solid #2a3850;
@@ -205,14 +178,12 @@
             padding: 16px 20px;
             font-size: 1rem;
             color: #ffffff;
-            transition: all 0.2s;
             width: 100%;
         }
         
         .field-group input:focus {
             outline: none;
             border-color: #7f9fff;
-            box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2);
         }
         
         .button-group {
@@ -233,20 +204,14 @@
             color: #d0deff;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 0 #080c18, 0 8px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 6px 0 #080c18;
         }
         
         .primary-btn:hover {
             background: linear-gradient(145deg, #202e50, #121a32);
             border-color: #6f8ad0;
-            color: #ffffff;
             transform: translateY(-2px);
-            box-shadow: 0 8px 0 #0a0f1c, 0 12px 20px rgba(0,0,0,0.5);
-        }
-        
-        .primary-btn:active {
-            transform: translateY(4px);
-            box-shadow: 0 3px 0 #080c18;
+            box-shadow: 0 8px 0 #0a0f1c;
         }
         
         .secondary-btn {
@@ -265,7 +230,6 @@
             color: #ffffff;
         }
         
-        /* Result Dashboard */
         .revelation-dashboard {
             opacity: 0;
             transform: translateY(30px);
@@ -279,7 +243,6 @@
             pointer-events: all;
         }
         
-        /* Primary Number Display */
         .number-throne {
             background: rgba(5, 8, 18, 0.85);
             backdrop-filter: blur(8px);
@@ -292,7 +255,6 @@
             align-items: center;
             justify-content: space-between;
             gap: 20px;
-            box-shadow: 0 20px 40px -10px black;
         }
         
         .life-number-glow {
@@ -315,7 +277,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 50px #3f6ac0;
         }
         
         .life-number-value.master {
@@ -361,13 +322,11 @@
             width: 0%;
             background: linear-gradient(90deg, #6c8cda, #b79eff);
             border-radius: 10px;
-            box-shadow: 0 0 15px #6b8cff;
         }
         
-        /* Archetype Grid */
         .archetype-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -378,11 +337,6 @@
             border: 1px solid #263959;
             border-radius: 24px;
             padding: 20px 16px;
-            transition: 0.25s;
-        }
-        
-        .pillar-card:hover {
-            border-color: #4f6ea5;
         }
         
         .pillar-header {
@@ -413,10 +367,9 @@
             line-height: 1.6;
         }
         
-        /* Duality Grid */
         .duality-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -466,27 +419,29 @@
             color: #ff8a8a;
         }
         
-        /* Elemental Grid – FIXED: now uses auto-fit with proper min width, no cutoff */
+        /* FIXED: Elemental Grid - now uses full width, no truncation */
         .elemental-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
             margin-bottom: 30px;
         }
         
         .element-card {
-            background: rgba(4, 8, 18, 0.8);
-            backdrop-filter: blur(4px);
+            background: rgba(4, 8, 18, 0.85);
+            backdrop-filter: blur(5px);
             border: 1px solid #2d3f62;
             border-radius: 20px;
-            padding: 15px 8px;
-            text-align: center;
+            padding: 16px 12px;
+            text-align: left;
             word-break: break-word;
+            overflow-wrap: break-word;
         }
         
         .element-icon {
             font-size: 28px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            display: inline-block;
         }
         
         .element-label {
@@ -494,29 +449,31 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #9aafd9;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
+            display: block;
         }
         
         .element-value {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 600;
             color: white;
-            line-height: 1.3;
+            line-height: 1.4;
             word-break: break-word;
+            margin-bottom: 8px;
         }
         
         .element-detail {
-            font-size: 0.65rem;
+            font-size: 0.75rem;
             color: #b0c0e0;
-            margin-top: 4px;
-            line-height: 1.3;
+            line-height: 1.5;
             word-break: break-word;
+            white-space: normal;
+            overflow: visible;
         }
         
-        /* Depth Section */
         .depth-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -560,10 +517,9 @@
             color: #b2c6ff;
         }
         
-        /* Karmic Section */
         .karmic-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -585,10 +541,9 @@
             font-size: 1.1rem;
         }
         
-        /* Timeline */
         .timeline-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -615,7 +570,6 @@
             word-break: break-word;
         }
         
-        /* Compatibility */
         .compat-grid {
             display: flex;
             gap: 15px;
@@ -641,16 +595,16 @@
             font-size: 1.1rem;
         }
         
-        /* Synthesis Footer */
         .synthesis-footer {
             margin-top: 25px;
-            background: linear-gradient(145deg, rgba(10,15,30,0.8), rgba(5,8,20,0.9));
+            background: linear-gradient(145deg, rgba(10,15,30,0.85), rgba(5,8,20,0.95));
             border-radius: 20px;
             padding: 25px 20px;
             font-size: 1rem;
             color: #d0e0ff;
             border-left: 4px solid #b79eff;
             word-break: break-word;
+            line-height: 1.7;
         }
         
         .cosmic-footer {
@@ -663,21 +617,14 @@
             padding-top: 20px;
         }
         
-        .footnote {
-            color: #303e60;
-            margin-top: 6px;
-        }
-        
-        /* mobile fine-tuning */
         @media (max-width: 600px) {
-            h1 { font-size: 2rem; letter-spacing: 3px; }
-            .subtitle { font-size: 0.7rem; letter-spacing: 1.5px; }
-            .glyph { font-size: 30px; gap: 20px; }
-            .your-logo { max-width: 200px; }
+            h1 { font-size: 1.8rem; letter-spacing: 3px; }
+            .glyph { font-size: 28px; }
+            .elemental-grid { grid-template-columns: 1fr; }
+            .duality-grid { grid-template-columns: 1fr; }
+            .archetype-grid { grid-template-columns: 1fr; }
             .number-throne { flex-direction: column; align-items: flex-start; }
             .vibration-meter { align-items: flex-start; max-width: 100%; }
-            .elemental-grid { grid-template-columns: repeat(2, 1fr); }
-            .pillar-header h3 { font-size: 1rem; }
         }
     </style>
 </head>
@@ -725,7 +672,6 @@
 
 <script>
     (function() {
-        // -------------------- CORE CALCULATIONS --------------------
         function reduceToDigit(num, respectMaster = true) {
             if (respectMaster && (num === 11 || num === 22 || num === 33)) return num;
             while (num > 9 && !(respectMaster && (num === 11 || num === 22 || num === 33))) {
@@ -740,12 +686,11 @@
             return reduceToDigit(total);
         }
 
-        // -------------------- MASTER DATABASE (VERIFIED) --------------------
+        // ==================== MASTER DATABASE ====================
         const lifePathData = {
             1: {
-                name: "THE PIONEER · INDIVIDUATOR",
-                archetype: "The Leader · The Originator · The Independent",
-                centralFocus: "Learn the power of self‑reliance and individuation. The soul chose to establish independence, to lead, and to forge new paths. Attainment comes through courage and standing alone. (Wilk: attainment, new beginnings, self‑confidence, action, spiritual unity)",
+                name: "THE PIONEER · INDIVIDUATOR", archetype: "The Leader · The Originator · The Independent",
+                centralFocus: "Learn the power of self‑reliance and individuation. The soul chose to establish independence, to lead, and to forge new paths. (Wilk: attainment, new beginnings, self‑confidence, action, spiritual unity)",
                 vibration: "primal · assertive · initiating · yang · pioneering",
                 positiveTraits: ["independent", "original thinker", "courageous", "strong will", "executive ability", "creative", "self‑motivated", "trendsetting", "visionary", "determined"],
                 negativeTraits: ["domineering", "self‑centered", "arrogant", "impatient", "dictatorial", "controlling", "egotistical", "aggressive", "intolerant", "bossy"],
@@ -761,24 +706,16 @@
                 maturity: "With a 1 Maturity Number, life steers you toward embracing your individuality and using it to your advantage. Your life's goal is to become a kind and compassionate leader. As you age, your pioneering spirit becomes tempered with wisdom.",
                 karmicLesson: "If 1 is a Karmic Lesson, you must learn to be independent, courageous, and stand up for yourself despite others' opinions. Past lives may have involved either excessive dominance or excessive submission.",
                 compatibility: "Harmonious with 3,5,7; challenged with 2,4,6. (Wilk: 1 compatible with 3,4,5,7,22/4)",
-                element: "Fire",
-                elementDetails: "Fire as the element of transformation and life force.",
-                color: "Red",
-                colorDetails: "Red stimulates your root chakra and grounds your ambitious energy.",
-                gem: "Carnelian, Ruby, Garnet",
-                crystalDetails: "Carnelian activates creativity and courage. Ruby enhances leadership with heart-centered wisdom. Garnet grounds visionary energy into practical action. (Costelloe: 'Carnelian awakens self-wisdom and promotes self‑expression')",
-                tarot: "The Magician, The Sun, Wheel of Fortune",
-                chakra: "Root (Muladhara)",
-                chakraDetails: "Your root chakra is your foundation. When balanced, you feel secure in your independence. When blocked, you may feel ungrounded and anxious despite external success.",
-                planetary: "Sun, Mars",
-                astrology: "Aries, Leo, Aquarius resonance",
-                physical: "Head, heart, senses; if imbalanced: headaches, circulation issues, hypertension",
+                element: "Fire", elementDetails: "Fire as the element of transformation and life force. You ignite, inspire, and sometimes burn out. Your challenge is to maintain your flame without consuming yourself or others.",
+                color: "Red", colorDetails: "Red stimulates your root chakra and grounds your ambitious energy. Use red to connect with your physical vitality and courage.",
+                gem: "Carnelian, Ruby, Garnet", crystalDetails: "Carnelian activates creativity and courage. Ruby enhances leadership with heart-centered wisdom. Garnet grounds visionary energy into practical action. (Costelloe: 'Carnelian awakens self-wisdom and promotes self‑expression')",
+                tarot: "The Magician, The Sun, Wheel of Fortune", chakra: "Root (Muladhara)", chakraDetails: "Your root chakra is your foundation. When balanced, you feel secure in your independence. When blocked, you may feel ungrounded and anxious despite external success.",
+                planetary: "Sun, Mars", astrology: "Aries, Leo, Aquarius resonance", physical: "Head, heart, senses; if imbalanced: headaches, circulation issues, hypertension",
                 lifeLessons: "To become self‑aware; to harmonize with others; to embrace individuality; to utilize creative power; to be diplomatic, patient, tolerant; to love and believe in self; to master aggression.",
                 expression: "You're here to become yourself completely, then lead others by example."
             },
             2: {
-                name: "THE DIPLOMAT · RELATER",
-                archetype: "The Peacemaker · The Mediator · The Healer",
+                name: "THE DIPLOMAT · RELATER", archetype: "The Peacemaker · The Mediator · The Healer",
                 centralFocus: "Learn cooperation, sensitivity, and the art of relationship. The soul chose to understand duality, partnership, and harmony. (Wilk: relationships, love, peace, dualities, knowing the higher and lower selves)",
                 vibration: "receptive · diplomatic · intuitive · yin · harmonious",
                 positiveTraits: ["cooperative", "sensitive", "mediator", "patient", "intuitive", "loving", "supportive", "creative", "diplomatic", "balanced"],
@@ -795,24 +732,16 @@
                 maturity: "With a 2 Maturity Number, life steers you toward becoming more intuitive and compassionate. Harmonious relationships and creative expansion come with age.",
                 karmicLesson: "If 2 is a Karmic Lesson, you must learn to be more cooperative, patient, and sensitive to others' needs. Past lives may have involved isolation or excessive independence.",
                 compatibility: "Harmonious with 2,3,4,6,9,11/2,22/4,33/6; challenged with 1,5,7,8",
-                element: "Water",
-                elementDetails: "Water as emotion, intuition, and flow. You adapt to any container, but must ensure you don't lose your essential nature. Like water, you can be gentle or powerful.",
-                color: "Orange",
-                colorDetails: "Orange balances your emotional nature with creative expression. Use orange when you need to speak your truth without being overwhelmed by feelings.",
-                gem: "Moonstone, Agate, Azurite, Emerald",
-                crystalDetails: "Moonstone enhances intuition and emotional balance. Agate grounds your sensitivity into practical wisdom. Azurite opens psychic awareness. Emerald heals the heart. (Costelloe: 'Moonstone acts to balance emotion, and reconnect with moon phases and goddess energy')",
-                tarot: "High Priestess, Judgment",
-                chakra: "Sacral (Svadhisthana)",
-                chakraDetails: "Your sacral chakra is the seat of your emotional intelligence. When balanced, you flow with life and connect deeply. When blocked, you may feel emotionally stuck or codependent.",
-                planetary: "Moon, Venus",
-                astrology: "Cancer, Libra",
-                physical: "Nerves, kidneys, spleen, stomach; stress affects digestion; prone to anxiety and emotional eating",
+                element: "Water", elementDetails: "Water as emotion, intuition, and flow. You adapt to any container, but must ensure you don't lose your essential nature. Like water, you can be gentle or powerful.",
+                color: "Orange", colorDetails: "Orange balances your emotional nature with creative expression. Use orange when you need to speak your truth without being overwhelmed by feelings.",
+                gem: "Moonstone, Agate, Azurite, Emerald", crystalDetails: "Moonstone enhances intuition and emotional balance. Agate grounds your sensitivity into practical wisdom. Azurite opens psychic awareness. Emerald heals the heart. (Costelloe: 'Moonstone acts to balance emotion, and reconnect with moon phases and goddess energy')",
+                tarot: "High Priestess, Judgment", chakra: "Sacral (Svadhisthana)", chakraDetails: "Your sacral chakra is the seat of your emotional intelligence. When balanced, you flow with life and connect deeply. When blocked, you may feel emotionally stuck or codependent.",
+                planetary: "Moon, Venus", astrology: "Cancer, Libra", physical: "Nerves, kidneys, spleen, stomach; stress affects digestion; prone to anxiety and emotional eating",
                 lifeLessons: "To love and believe in self; to define boundaries; to find strength to say no; to trust intuition; to embrace independence; to be honest about feelings; to master sensitivity.",
                 expression: "You are here to heal through love and to teach others the power of gentle strength."
             },
             3: {
-                name: "THE CREATOR · COMMUNICATOR",
-                archetype: "The Artist · The Entertainer · The Muse · The Wordsmith",
+                name: "THE CREATOR · COMMUNICATOR", archetype: "The Artist · The Entertainer · The Muse · The Wordsmith",
                 centralFocus: "Learn self‑expression, joy, and creativity. The soul chose to channel beauty, words, and inspiration. (Wilk: self‑expression, talent, ideals, enlightenment of Spirit)",
                 vibration: "expressive · enthusiastic · artistic · playful · inspiring",
                 positiveTraits: ["creative", "inspiring", "social", "optimistic", "eloquent", "imaginative", "charismatic", "humorous", "versatile", "expressive"],
@@ -829,24 +758,16 @@
                 maturity: "With a 3 Maturity Number, life steers you toward self‑expression. You become more extroverted, social, and charismatic with age.",
                 karmicLesson: "If 3 is a Karmic Lesson, you must learn to be more creative and optimistic, and to focus on goals. Past lives may have involved suppression of voice or misuse of creative power.",
                 compatibility: "Harmonious with 1,2,3,5,6,9,11/2,33/6; challenged with 4,7,8",
-                element: "Fire",
-                elementDetails: "Fire as creative spark, inspiration, and transformation. Like fire, your creativity can illuminate or consume. Learn to tend your flame without burning out.",
-                color: "Yellow",
-                colorDetails: "Yellow stimulates your solar plexus, the seat of personal power. Use yellow when you need confidence to express your truth.",
-                gem: "Citrine, Amethyst, Aquamarine, Jade",
-                crystalDetails: "Citrine amplifies creative energy and optimism. Amethyst balances emotional highs and lows. Aquamarine soothes expression. Jade connects creativity to heart wisdom. (Costelloe: 'Citrine enhances new cycles in life with clear intention and devotion')",
-                tarot: "The Empress, The World, The Hanged Man",
-                chakra: "Solar Plexus (Manipura)",
-                chakraDetails: "Your solar plexus is your center of personal power. When balanced, you express confidently without ego. When blocked, you may seek external validation or hide your light.",
-                planetary: "Jupiter, Mercury",
-                astrology: "Sagittarius, Pisces, Leo",
-                physical: "Liver, skin, throat; stress manifests as skin issues, throat tension, or creative blocks",
+                element: "Fire", elementDetails: "Fire as creative spark, inspiration, and transformation. Like fire, your creativity can illuminate or consume. Learn to tend your flame without burning out.",
+                color: "Yellow", colorDetails: "Yellow stimulates your solar plexus, the seat of personal power. Use yellow when you need confidence to express your truth.",
+                gem: "Citrine, Amethyst, Aquamarine, Jade", crystalDetails: "Citrine amplifies creative energy and optimism. Amethyst balances emotional highs and lows. Aquamarine soothes expression. Jade connects creativity to heart wisdom. (Costelloe: 'Citrine enhances new cycles in life with clear intention and devotion')",
+                tarot: "The Empress, The World, The Hanged Man", chakra: "Solar Plexus (Manipura)", chakraDetails: "Your solar plexus is your center of personal power. When balanced, you express confidently without ego. When blocked, you may seek external validation or hide your light.",
+                planetary: "Jupiter, Mercury", astrology: "Sagittarius, Pisces, Leo", physical: "Liver, skin, throat; stress manifests as skin issues, throat tension, or creative blocks",
                 lifeLessons: "To overcome self‑doubt; to focus, plan, prioritize; to express creatively; to speak truth; to communicate emotions; to attain emotional balance.",
                 expression: "You are here to turn life into art and remind others of the joy of being."
             },
             4: {
-                name: "THE BUILDER · GROUNDER",
-                archetype: "The Pillar · The Organizer · The Foundation · The Stabilizer",
+                name: "THE BUILDER · GROUNDER", archetype: "The Pillar · The Organizer · The Foundation · The Stabilizer",
                 centralFocus: "Learn discipline, order, and service through limitations. The soul chose to build foundations that last. (Wilk: work, responsibilities, organization, trust, rewards and punishments for actions)",
                 vibration: "stable · practical · diligent · earthy · structured",
                 positiveTraits: ["disciplined", "reliable", "hard worker", "organized", "loyal", "persistent", "conscientious", "grounded", "methodical", "trustworthy"],
@@ -863,24 +784,16 @@
                 maturity: "With a 4 Maturity Number, life steers you toward becoming more organized and focused. You can build a solid foundation for the future.",
                 karmicLesson: "If 4 is a Karmic Lesson, you must learn to be more responsible, disciplined, and practical. Past lives may have involved chaos or irresponsibility.",
                 compatibility: "Harmonious with 1,2,4,6,7,8,11/2,22/4,33/6; challenged with 3,5,9",
-                element: "Earth",
-                elementDetails: "Earth as foundation, stability, and manifestation. Like earth, you provide the ground for others to grow. Your challenge is to remain fertile without becoming rigid.",
-                color: "Green",
-                colorDetails: "Green opens your heart, balancing work with love. Use green when you need to remember that your labor serves life, not just survival.",
-                gem: "Jade, Emerald, Moonstone, Tigers Eye",
-                crystalDetails: "Jade grounds spiritual wisdom into practical action.",
-                tarot: "The Emperor, Death",
-                chakra: "Heart (Anahata)",
-                chakraDetails: "Your heart chakra is where structure meets love. When balanced, you build from compassion. When blocked, you build walls instead of bridges.",
-                planetary: "Earth, Saturn",
-                astrology: "Taurus, Capricorn, Virgo",
-                physical: "Heart, teeth, blood, bones; stress affects cardiovascular system and skeletal structure; prone to tension in jaw and back",
+                element: "Earth", elementDetails: "Earth as foundation, stability, and manifestation. Like earth, you provide the ground for others to grow. Your challenge is to remain fertile without becoming rigid.",
+                color: "Green", colorDetails: "Green opens your heart, balancing work with love. Use green when you need to remember that your labor serves life, not just survival.",
+                gem: "Jade, Emerald, Moonstone, Tigers Eye", crystalDetails: "Jade grounds spiritual wisdom into practical action. Emerald heals the heart so work doesn't become escape. Moonstone balances emotions. Tigers Eye enhances practical vision. (Costelloe: 'Jadeite promotes abundance, good health and prosperity')",
+                tarot: "The Emperor, Death", chakra: "Heart (Anahata)", chakraDetails: "Your heart chakra is where structure meets love. When balanced, you build from compassion. When blocked, you build walls instead of bridges.",
+                planetary: "Earth, Saturn", astrology: "Taurus, Capricorn, Virgo", physical: "Heart, teeth, blood, bones; stress affects cardiovascular system and skeletal structure; prone to tension in jaw and back",
                 lifeLessons: "To persist through adversity; to embrace and surrender to change; to be flexible; to think outside box; to build stable foundation; to express emotion.",
                 expression: "You are the spine of civilization; your work holds the world together."
             },
             5: {
-                name: "THE FREEDOM‑SEEKER · EXPERIENCER",
-                archetype: "The Adventurer · The Explorer · The Messenger · The Catalyst",
+                name: "THE FREEDOM‑SEEKER · EXPERIENCER", archetype: "The Adventurer · The Explorer · The Messenger · The Catalyst",
                 centralFocus: "Learn constructive freedom, adaptability, and the wisdom of change. The soul chose variety and expansion. (Wilk: freedom, change, experience, travel, curiosity, realizing there is something more than the physical)",
                 vibration: "dynamic · versatile · curious · restless · progressive",
                 positiveTraits: ["adaptable", "adventurous", "quick", "resourceful", "progressive", "magnetic", "courageous", "enthusiastic", "versatile", "communicative"],
@@ -897,24 +810,16 @@
                 maturity: "With a 5 Maturity Number, life steers you toward becoming more adventurous and outgoing. Many new experiences await.",
                 karmicLesson: "If 5 is a Karmic Lesson, you must learn to be more flexible, adaptable, and to communicate effectively. Past lives may have involved rigidity or misuse of freedom.",
                 compatibility: "Harmonious with 1,3,5,7,9; challenged with 2,4,6,8",
-                element: "Air",
-                elementDetails: "Air as thought, communication, and movement. Like wind, you can be gentle or powerful, refreshing or destructive. Learn to direct your breath without becoming breathless.",
-                color: "Tan",
-                colorDetails: "Tan grounds your flighty energy. Use tan when you need to balance adventure with responsibility, movement with stability.",
-                gem: "Turquoise, Aquamarine, Ruby, Amber",
-                crystalDetails: "Turquoise protects while communicating. Aquamarine soothes restless energy. Ruby grounds passion into commitment. Amber preserves wisdom from experience. (Costelloe: 'Turquoise is a protective stone, aiding in truthful communication and meditation')",
-                tarot: "The Hierophant, Temperance",
-                chakra: "Throat (Vishuddha)",
-                chakraDetails: "Your throat chakra is your center of expression. When balanced, you speak your truth and live your freedom. When blocked, you may feel trapped by unexpressed words or emotions.",
-                planetary: "Mercury, Jupiter",
-                astrology: "Gemini, Aquarius, Sagittarius",
-                physical: "Nerves, sensory organs, skin; prone to restlessness, anxiety, and overstimulation; addiction vulnerability",
+                element: "Air", elementDetails: "Air as thought, communication, and movement. Like wind, you can be gentle or powerful, refreshing or destructive. Learn to direct your breath without becoming breathless.",
+                color: "Tan", colorDetails: "Tan grounds your flighty energy. Use tan when you need to balance adventure with responsibility, movement with stability.",
+                gem: "Turquoise, Aquamarine, Ruby, Amber", crystalDetails: "Turquoise protects while communicating. Aquamarine soothes restless energy. Ruby grounds passion into commitment. Amber preserves wisdom from experience. (Costelloe: 'Turquoise is a protective stone, aiding in truthful communication and meditation')",
+                tarot: "The Hierophant, Temperance", chakra: "Throat (Vishuddha)", chakraDetails: "Your throat chakra is your center of expression. When balanced, you speak your truth and live your freedom. When blocked, you may feel trapped by unexpressed words or emotions.",
+                planetary: "Mercury, Jupiter", astrology: "Gemini, Aquarius, Sagittarius", physical: "Nerves, sensory organs, skin; prone to restlessness, anxiety, and overstimulation; addiction vulnerability",
                 lifeLessons: "To use freedom constructively; to embrace temperance; to plan and prioritize; to focus and commit; to achieve depth; to be honest and authentic.",
                 expression: "You are here to taste everything and distill wisdom from the feast."
             },
             6: {
-                name: "THE GUARDIAN · NURTURER",
-                archetype: "The Caregiver · The Teacher · The Healer · The Parent",
+                name: "THE GUARDIAN · NURTURER", archetype: "The Caregiver · The Teacher · The Healer · The Parent",
                 centralFocus: "Learn responsibility, love, and service. The soul chose to be the pillar of family and community. (Wilk: responsibilities, power, service, decisions, adjustments, home, marriage, harmony of God's will with yours)",
                 vibration: "nurturing · responsible · compassionate · harmonious · protective",
                 positiveTraits: ["responsible", "loving", "protective", "healer", "balanced", "generous", "supportive", "wise", "idealistic", "devoted"],
@@ -931,24 +836,16 @@
                 maturity: "With a 6 Maturity Number, life steers you toward expanding your capacity to love. You may be drawn to service or creative work.",
                 karmicLesson: "If 6 is a Karmic Lesson, you must learn to be more sympathetic, dutiful, and take responsibility. Past lives may have involved avoidance of commitment or misuse of love.",
                 compatibility: "Harmonious with 2,3,4,6,8,9,11/2,22/4,33/6; challenged with 1,5,7",
-                element: "Earth + Air",
-                elementDetails: "Earth grounds your nurturing; air gives it wings. You build foundations of love while communicating care. Your challenge is to stay grounded without becoming heavy.",
-                color: "Blue",
-                colorDetails: "Blue opens your throat and calms your heart. Use blue when you need to speak your truth with love, to set boundaries with compassion.",
-                gem: "Sapphire, Azurite, Rhodochrosite, Rose Quartz",
-                crystalDetails: "Sapphire brings wisdom to love. Azurite opens intuition in service. Rhodochrosite heals the giver's heart. Rose Quartz teaches self-love. (Costelloe: 'Rose Quartz promotes love, self love, love between people, and spiritual love')",
-                tarot: "The Lovers, The Devil",
-                chakra: "Third Eye (Ajna)",
-                chakraDetails: "Your third eye is where love meets wisdom. When balanced, you see clearly what others need—and what you need. When blocked, you may confuse your needs with theirs.",
-                planetary: "Venus, Jupiter",
-                astrology: "Libra, Cancer, Taurus, Virgo",
-                physical: "Heart, neck, throat, immune system; prone to heart conditions from emotional stress, throat issues from unexpressed feelings",
+                element: "Earth + Air", elementDetails: "Earth grounds your nurturing; air gives it wings. You build foundations of love while communicating care. Your challenge is to stay grounded without becoming heavy.",
+                color: "Blue", colorDetails: "Blue opens your throat and calms your heart. Use blue when you need to speak your truth with love, to set boundaries with compassion.",
+                gem: "Sapphire, Azurite, Rhodochrosite, Rose Quartz", crystalDetails: "Sapphire brings wisdom to love. Azurite opens intuition in service. Rhodochrosite heals the giver's heart. Rose Quartz teaches self-love. (Costelloe: 'Rose Quartz promotes love, self love, love between people, and spiritual love')",
+                tarot: "The Lovers, The Devil", chakra: "Third Eye (Ajna)", chakraDetails: "Your third eye is where love meets wisdom. When balanced, you see clearly what others need—and what you need. When blocked, you may confuse your needs with theirs.",
+                planetary: "Venus, Jupiter", astrology: "Libra, Cancer, Taurus, Virgo", physical: "Heart, neck, throat, immune system; prone to heart conditions from emotional stress, throat issues from unexpressed feelings",
                 lifeLessons: "To love and appreciate self; to balance giving and receiving; to take responsibility; to say no; to accept imperfection; to let go and move on.",
                 expression: "You are the heart of the home and the conscience of the community."
             },
             7: {
-                name: "THE SEEKER · SAGE · GENIUS",
-                archetype: "The Mystic · The Philosopher · The Analyst · The Genius",
+                name: "THE SEEKER · SAGE · GENIUS", archetype: "The Mystic · The Philosopher · The Analyst · The Genius",
                 centralFocus: "Learn analysis, introspection, and spiritual truth. The soul chose to dive deep and find wisdom. (Wilk: the God Self within, wisdom, knowledge, study, meditation, spiritual realization)",
                 vibration: "analytical · mystical · reserved · introspective · genius",
                 positiveTraits: ["wise", "intuitive", "analytical", "perceptive", "philosophical", "independent", "insightful", "contemplative", "brilliant", "specialized"],
@@ -965,24 +862,16 @@
                 maturity: "With a 7 Maturity Number, life steers you toward deeper knowledge and wisdom. You may become a specialist in your craft.",
                 karmicLesson: "If 7 is a Karmic Lesson, you must learn to find spiritual faith and master your craft with optimism. Past lives may have involved skepticism or misuse of knowledge.",
                 compatibility: "Harmonious with 1,4,5,7,9,11/2,22/4; challenged with 2,3,6,8",
-                element: "Water",
-                elementDetails: "Water as depth, intuition, and flow. Like deep water, you hold mysteries unseen. Your challenge is to let others swim in your depths without drowning them.",
-                color: "Purple",
-                colorDetails: "Purple connects you to higher consciousness. Use purple when you need to access your inner knowing, to trust what you cannot prove.",
-                gem: "Amethyst, Agate, Opal, Rose Quartz, Lapis Lazuli",
-                crystalDetails: "Amethyst opens intuition and protects during spiritual work. Agate grounds wisdom into practical insight. Opal reveals hidden patterns. Lapis Lazuli connects to ancient wisdom. (Costelloe: 'Amethyst promotes balance, harmony, purity, healing, spiritual transmutation and piety')",
-                tarot: "The Chariot, The Tower",
-                chakra: "Crown (Sahasrara)",
-                chakraDetails: "Your crown chakra is your connection to universal wisdom. When balanced, you receive insights from beyond. When blocked, you may feel cut off from meaning.",
-                planetary: "Neptune, Saturn",
-                astrology: "Pisces, Scorpio, Virgo",
-                physical: "Nerves, glands, pineal gland, nervous system; prone to anxiety, sleep issues, and environmental sensitivity",
+                element: "Water", elementDetails: "Water as depth, intuition, and flow. Like deep water, you hold mysteries unseen. Your challenge is to let others swim in your depths without drowning them.",
+                color: "Purple", colorDetails: "Purple connects you to higher consciousness. Use purple when you need to access your inner knowing, to trust what you cannot prove.",
+                gem: "Amethyst, Agate, Opal, Rose Quartz, Lapis Lazuli", crystalDetails: "Amethyst opens intuition and protects during spiritual work. Agate grounds wisdom into practical insight. Opal reveals hidden patterns. Lapis Lazuli connects to ancient wisdom. (Costelloe: 'Amethyst promotes balance, harmony, purity, healing, spiritual transmutation and piety')",
+                tarot: "The Chariot, The Tower", chakra: "Crown (Sahasrara)", chakraDetails: "Your crown chakra is your connection to universal wisdom. When balanced, you receive insights from beyond. When blocked, you may feel cut off from meaning.",
+                planetary: "Neptune, Saturn", astrology: "Pisces, Scorpio, Virgo", physical: "Nerves, glands, pineal gland, nervous system; prone to anxiety, sleep issues, and environmental sensitivity",
                 lifeLessons: "To discover spiritual truth; to be open and trusting; to involve self in life; to communicate emotions; to embrace imperfection; to have hope and faith.",
                 expression: "You are the lighthouse in the fog; your solitude fuels your light."
             },
             8: {
-                name: "THE MASTER · ACHIEVER",
-                archetype: "The Executive · The Magnate · The Authority · The Powerhouse",
+                name: "THE MASTER · ACHIEVER", archetype: "The Executive · The Magnate · The Authority · The Powerhouse",
                 centralFocus: "Learn material mastery, power, and abundance. The soul chose to wield influence and build empires. (Wilk: material aspects, power, money, dependability, politics, the inner voice becomes clear)",
                 vibration: "ambitious · authoritative · efficient · powerful · manifesting",
                 positiveTraits: ["strategic", "executive", "confident", "generous", "visionary", "organized", "tenacious", "fair", "powerful", "abundant"],
@@ -999,24 +888,16 @@
                 maturity: "With an 8 Maturity Number, life steers you toward career focus and achievement. With integrity, much success is possible.",
                 karmicLesson: "If 8 is a Karmic Lesson, you must learn to reclaim personal power and exude abundance, not victimhood. Past lives may have involved misuse or abdication of power.",
                 compatibility: "Harmonious with 4,6,8,22/4,33/6; challenged with 1,3,5,7,9",
-                element: "Earth",
-                elementDetails: "Earth as manifestation and foundation. Like rich soil, you can grow abundance. Your challenge is to remember that you are not the soil—you are the gardener.",
-                color: "Black/Gray",
-                colorDetails: "Black contains all colors, representing your potential. Use black when you need to access your power, to remember that you are more than you appear.",
-                gem: "Garnet, Coral, Ruby, Topaz, Black Onyx",
-                crystalDetails: "Garnet grounds ambition into action. Ruby brings heart to power. Topaz clarifies vision. Black Onyx protects while building. (Costelloe: 'Garnet (Pyrope) brings positive thoughts to relationships; excellent for manifesting')",
-                tarot: "Strength, The Star",
-                chakra: "Root (Muladhara)",
-                chakraDetails: "Your root chakra is your foundation for material success. When balanced, you manifest with ease. When blocked, you may struggle with scarcity consciousness.",
-                planetary: "Saturn, Uranus",
-                astrology: "Capricorn, Leo, Taurus, Scorpio",
-                physical: "Stomach, intestines, bones, joints; prone to stress-related digestive issues, tension in lower back",
+                element: "Earth", elementDetails: "Earth as manifestation and foundation. Like rich soil, you can grow abundance. Your challenge is to remember that you are not the soil—you are the gardener.",
+                color: "Black/Gray", colorDetails: "Black contains all colors, representing your potential. Use black when you need to access your power, to remember that you are more than you appear.",
+                gem: "Garnet, Coral, Ruby, Topaz, Black Onyx", crystalDetails: "Garnet grounds ambition into action. Ruby brings heart to power. Topaz clarifies vision. Black Onyx protects while building. (Costelloe: 'Garnet (Pyrope) brings positive thoughts to relationships; excellent for manifesting')",
+                tarot: "Strength, The Star", chakra: "Root (Muladhara)", chakraDetails: "Your root chakra is your foundation for material success. When balanced, you manifest with ease. When blocked, you may struggle with scarcity consciousness.",
+                planetary: "Saturn, Uranus", astrology: "Capricorn, Leo, Taurus, Scorpio", physical: "Stomach, intestines, bones, joints; prone to stress-related digestive issues, tension in lower back",
                 lifeLessons: "To balance material and spiritual; to adopt abundance mindset; to reclaim personal power; to lead with respect; to live with honesty.",
                 expression: "You are here to prove that spirit and matter can coexist; build with integrity."
             },
             9: {
-                name: "THE HUMANITARIAN · WISE ONE",
-                archetype: "The Philanthropist · The Healer · The Visionary · The Completer",
+                name: "THE HUMANITARIAN · WISE ONE", archetype: "The Philanthropist · The Healer · The Visionary · The Completer",
                 centralFocus: "Learn selflessness, universal love, and completion. The soul chose to serve and let go. (Wilk: endings, completion, sacrifice to serve, travel, universal knowledge and love)",
                 vibration: "compassionate · philosophical · forgiving · wise · universal",
                 positiveTraits: ["generous", "tolerant", "idealistic", "artistic", "global minded", "sympathetic", "intuitive", "creative", "wise", "compassionate"],
@@ -1033,24 +914,16 @@
                 maturity: "With a 9 Maturity Number, life steers you toward service and creativity. You may wish to give back to the world.",
                 karmicLesson: "If 9 is a Karmic Lesson, you must learn to be more accepting, tolerant, and compassionate. Past lives may have involved judgment or selfishness.",
                 compatibility: "Harmonious with 2,3,5,6,7,9,11/2,22/4,33/6; challenged with 1,4,8",
-                element: "Fire",
-                elementDetails: "Fire as transformation and spirit. Like fire, you can purify or consume. Your challenge is to burn brightly without burning out.",
-                color: "Gold",
-                colorDetails: "Gold represents the completed cycle, the wisdom earned. Use gold when you need to remember that endings are beginnings in disguise.",
-                gem: "Lapis Lazuli, Amethyst, Hematite, Malachite, Goldstone",
-                crystalDetails: "Lapis Lazuli connects to ancient wisdom. Amethyst transmutes pain into peace. Hematite grounds idealism. Malachite transforms heart wounds. (Costelloe: 'Lapis Lazuli qualifies intuition, strengthens the mind, and promotes spiritual evolution')",
-                tarot: "The Hermit, The Moon",
-                chakra: "Crown (Sahasrara)",
-                chakraDetails: "Your crown chakra connects you to all that is. When balanced, you feel at one with humanity. When blocked, you may feel isolated and misunderstood.",
-                planetary: "Mars, Neptune",
-                astrology: "Aries, Scorpio, Sagittarius",
-                physical: "Immune system, skin, emotional body; prone to immune issues from suppressed emotions, skin conditions from internalized stress",
+                element: "Fire", elementDetails: "Fire as transformation and spirit. Like fire, you can purify or consume. Your challenge is to burn brightly without burning out.",
+                color: "Gold", colorDetails: "Gold represents the completed cycle, the wisdom earned. Use gold when you need to remember that endings are beginnings in disguise.",
+                gem: "Lapis Lazuli, Amethyst, Hematite, Malachite, Goldstone", crystalDetails: "Lapis Lazuli connects to ancient wisdom. Amethyst transmutes pain into peace. Hematite grounds idealism. Malachite transforms heart wounds. (Costelloe: 'Lapis Lazuli qualifies intuition, strengthens the mind, and promotes spiritual evolution')",
+                tarot: "The Hermit, The Moon", chakra: "Crown (Sahasrara)", chakraDetails: "Your crown chakra connects you to all that is. When balanced, you feel at one with humanity. When blocked, you may feel isolated and misunderstood.",
+                planetary: "Mars, Neptune", astrology: "Aries, Scorpio, Sagittarius", physical: "Immune system, skin, emotional body; prone to immune issues from suppressed emotions, skin conditions from internalized stress",
                 lifeLessons: "To be compassionate and tolerant; to live in service; to forgive; to let go; to work through family issues; to express creatively.",
                 expression: "You are the closing chapter of a cycle; your compassion heals the world."
             },
             11: {
-                name: "MASTER NUMBER · THE VISIONARY · THE GENIUS",
-                archetype: "The Illuminator · The Spiritual Messenger · The Inspired Teacher",
+                name: "MASTER NUMBER · THE VISIONARY · THE GENIUS", archetype: "The Illuminator · The Spiritual Messenger · The Inspired Teacher",
                 centralFocus: "Learn illumination, intuition, and spiritual inspiration. The soul operates on a higher frequency. (Wilk: inspiration, revelation, selfless service to others)",
                 vibration: "intuitive · inspirational · intense · enlightened · genius",
                 positiveTraits: ["prophetic", "idealistic", "magnetic", "creative", "spiritual guide", "charismatic", "wise", "compassionate", "visionary", "inspired"],
@@ -1067,24 +940,16 @@
                 maturity: "With an 11/2 Maturity Number, life steers you toward becoming more sensitive, intuitive, and spiritually aware.",
                 karmicLesson: "As a Master Number, you must rise above the lower tendencies of 2 and serve humanity. Past lives may have involved spiritual gifts used for ego or abandoned altogether.",
                 compatibility: "Harmonious with 2,3,4,6,7,9,11/2,22/4,33/6; challenged with 1,5,8",
-                element: "Air",
-                elementDetails: "Air as thought, inspiration, and spirit. Like the wind, you carry messages across distances. Your challenge is to stay grounded enough to deliver them clearly.",
-                color: "Pink",
-                colorDetails: "Pink opens the heart to higher frequencies. Use pink when you need to ground spiritual insight in love, to make your vision accessible.",
-                gem: "Lapis Lazuli, Amethyst, Aquamarine, Sapphire, Moonstone",
-                crystalDetails: "Lapis Lazuli opens communication with higher realms. Amethyst protects and purifies spiritual work. Aquamarine soothes oversensitivity. Sapphire brings wisdom. (Costelloe: 'Lapis Lazuli qualifies intuition, strengthens the mind, and promotes spiritual evolution')",
-                tarot: "Justice, The High Priestess",
-                chakra: "Third Eye + Crown",
-                chakraDetails: "Your third eye and crown work together to receive and translate higher wisdom. When balanced, you channel clearly. When blocked, you may feel cut off from source.",
-                planetary: "Uranus, Neptune",
-                astrology: "Sagittarius/Aquarius, Cancer/Leo, Pisces",
-                physical: "Nervous system, pineal gland, adrenal glands; prone to anxiety, insomnia; needs grounding practices",
+                element: "Air", elementDetails: "Air as thought, inspiration, and spirit. Like the wind, you carry messages across distances. Your challenge is to stay grounded enough to deliver them clearly.",
+                color: "Pink", colorDetails: "Pink opens the heart to higher frequencies. Use pink when you need to ground spiritual insight in love, to make your vision accessible.",
+                gem: "Lapis Lazuli, Amethyst, Aquamarine, Sapphire, Moonstone", crystalDetails: "Lapis Lazuli opens communication with higher realms. Amethyst protects and purifies spiritual work. Aquamarine soothes oversensitivity. Sapphire brings wisdom. (Costelloe: 'Lapis Lazuli qualifies intuition, strengthens the mind, and promotes spiritual evolution')",
+                tarot: "Justice, The High Priestess", chakra: "Third Eye + Crown", chakraDetails: "Your third eye and crown work together to receive and translate higher wisdom. When balanced, you channel clearly. When blocked, you may feel cut off from source.",
+                planetary: "Uranus, Neptune", astrology: "Sagittarius/Aquarius, Cancer/Leo, Pisces", physical: "Nervous system, pineal gland, adrenal glands; prone to anxiety, insomnia; needs grounding practices",
                 lifeLessons: "To understand, love, and believe in self; to utilize creative power; to live with honesty; to embrace spirituality; to merge material and spiritual; to serve humanity.",
                 expression: "You are the messenger; your life is the sermon."
             },
             22: {
-                name: "MASTER NUMBER · THE MASTER BUILDER",
-                archetype: "The Visionary Architect · The World Builder · The Creator",
+                name: "MASTER NUMBER · THE MASTER BUILDER", archetype: "The Visionary Architect · The World Builder · The Creator",
                 centralFocus: "Learn to manifest grand visions for humanity. Combine spiritual insight with practical power. (Wilk: absolute Truth, projects to benefit all of mankind)",
                 vibration: "powerful · constructive · global · visionary · genius",
                 positiveTraits: ["visionary", "practical", "organizer", "monumental", "leader", "inventive", "dedicated", "idealistic", "masterful", "manifesting"],
@@ -1101,24 +966,16 @@
                 maturity: "With a 22/4 Maturity Number, life steers you toward major accomplishments that serve the greater good.",
                 karmicLesson: "As a Master Number, you must overcome hypersensitivity and insecurity to achieve your potential. Past lives may have involved visionary gifts misused or abandoned.",
                 compatibility: "Harmonious with 1,2,4,6,7,8,9,11/2,22/4,33/6; challenged with 3,5",
-                element: "Water",
-                elementDetails: "Water as depth, flow, and potential. Like the ocean, you hold unimaginable power. Your challenge is to channel that power constructively.",
-                color: "Brown",
-                colorDetails: "Brown grounds your grand visions in practical reality. Use brown when you need to remember that every castle must have a foundation.",
-                gem: "Coral, Pearl, Black Coral, Malachite",
-                crystalDetails: "Coral grounds vision into form. Pearl builds wisdom layer by layer. Black Coral protects while creating. Malachite transforms vision into reality. (Costelloe: 'Mother of Pearl intensifies intuition and creativity; highly protective')",
-                tarot: "The Fool, The Emperor",
-                chakra: "All, especially Crown and Root",
-                chakraDetails: "Your entire chakra system is activated, needing to balance highest vision with deepest grounding. When balanced, you manifest miracles.",
-                planetary: "Uranus, Saturn, Jupiter",
-                astrology: "Capricorn/Leo, Taurus/Cancer/Virgo, Aquarius",
-                physical: "Nervous system, skeletal structure, immune system; prone to stress-related conditions, needs regular grounding practices",
+                element: "Water", elementDetails: "Water as depth, flow, and potential. Like the ocean, you hold unimaginable power. Your challenge is to channel that power constructively.",
+                color: "Brown", colorDetails: "Brown grounds your grand visions in practical reality. Use brown when you need to remember that every castle must have a foundation.",
+                gem: "Coral, Pearl, Black Coral, Malachite", crystalDetails: "Coral grounds vision into form. Pearl builds wisdom layer by layer. Black Coral protects while creating. Malachite transforms vision into reality. (Costelloe: 'Mother of Pearl intensifies intuition and creativity; highly protective')",
+                tarot: "The Fool, The Emperor", chakra: "All, especially Crown and Root", chakraDetails: "Your entire chakra system is activated, needing to balance highest vision with deepest grounding. When balanced, you manifest miracles.",
+                planetary: "Uranus, Saturn, Jupiter", astrology: "Capricorn/Leo, Taurus/Cancer/Virgo, Aquarius", physical: "Nervous system, skeletal structure, immune system; prone to stress-related conditions, needs regular grounding practices",
                 lifeLessons: "To understand, love, and believe in self; to utilize creative power; to live with honesty; to embrace spirituality; to merge material and spiritual; to serve humanity.",
                 expression: "You are here to reshape reality; your hands are guided by the divine."
             },
             33: {
-                name: "MASTER NUMBER · THE MASTER TEACHER · THE COSMIC PARENT",
-                archetype: "The Cosmic Parent · The Healing Master · The Universal Lover",
+                name: "MASTER NUMBER · THE MASTER TEACHER · THE COSMIC PARENT", archetype: "The Cosmic Parent · The Healing Master · The Universal Lover",
                 centralFocus: "Learn unconditional love and universal healing. The soul is here to elevate consciousness. (Wilk: compassion, a teacher of teachers, leadership, assume responsibilities with no thought of rewards)",
                 vibration: "compassionate · healing · selfless · universal · genius",
                 positiveTraits: ["healer", "teacher", "self‑sacrificing", "divine love", "forgiving", "creative", "joyful", "uplifting", "nurturing", "wise"],
@@ -1135,18 +992,11 @@
                 maturity: "With a 33/6 Maturity Number, life steers you toward teaching, healing, and creative expression. You may feel called to serve humanity.",
                 karmicLesson: "As a Master Number, you must learn not to interfere with others' free will in your quest to heal. Past lives may have involved healing gifts used to control or abandoned.",
                 compatibility: "Harmonious with 2,3,4,6,8,9,11/2,22/4,33/6; challenged with 1,5,7",
-                element: "Fire",
-                elementDetails: "Fire as divine love and transformation. Like sacred flame, you illuminate and purify. Your challenge is to burn without consuming.",
-                color: "Crystal / White",
-                colorDetails: "Crystal/white contains all colors, representing your complete nature. Use white when you need to remember that you are whole.",
-                gem: "Rose Quartz, Diamond, Seamanite, Kunzite, Morganite",
-                crystalDetails: "Rose Quartz teaches self-love. Diamond amplifies pure intention. Kunzite opens the heart to universal love. Morganite brings compassion to teaching. (Costelloe: 'Kunzite channels unconditional love, kindness, and intuitive awakening')",
-                tarot: "Judgment, The Star",
-                chakra: "Heart + Crown",
-                chakraDetails: "Your heart and crown work together, grounding divine love into human experience. When balanced, you love unconditionally without losing yourself.",
-                planetary: "Neptune, Venus, Jupiter",
-                astrology: "Libra/Sagittarius/Pisces, Cancer/Leo, Aquarius",
-                physical: "Heart, immune system, nervous system; prone to heart issues from emotional exhaustion, immune problems from overgiving",
+                element: "Fire", elementDetails: "Fire as divine love and transformation. Like sacred flame, you illuminate and purify. Your challenge is to burn without consuming.",
+                color: "Crystal / White", colorDetails: "Crystal/white contains all colors, representing your complete nature. Use white when you need to remember that you are whole.",
+                gem: "Rose Quartz, Diamond, Seamanite, Kunzite, Morganite", crystalDetails: "Rose Quartz teaches self-love. Diamond amplifies pure intention. Kunzite opens the heart to universal love. Morganite brings compassion to teaching. (Costelloe: 'Kunzite channels unconditional love, kindness, and intuitive awakening')",
+                tarot: "Judgment, The Star", chakra: "Heart + Crown", chakraDetails: "Your heart and crown work together, grounding divine love into human experience. When balanced, you love unconditionally without losing yourself.",
+                planetary: "Neptune, Venus, Jupiter", astrology: "Libra/Sagittarius/Pisces, Cancer/Leo, Aquarius", physical: "Heart, immune system, nervous system; prone to heart issues from emotional exhaustion, immune problems from overgiving",
                 lifeLessons: "To understand, love, and believe in self; to utilize creative power; to live with honesty; to embrace spirituality; to merge material and spiritual; to serve humanity.",
                 expression: "You are the loving heart of the universe; your presence heals."
             }
@@ -1169,7 +1019,7 @@
 
         window.revealPath = function() {
             const birthDate = document.getElementById('birthDate').value;
-            const fullName = document.getElementById('fullName').value.trim() || "JONATHAN DIGGS";
+            const fullName = document.getElementById('fullName').value.trim() || "ALEXANDER THORNE";
             if (!birthDate) { alert("Enter birth date"); return; }
 
             const lifeNumber = calculateLifePath(birthDate);
@@ -1215,12 +1065,12 @@
                 </div>
 
                 <div class="elemental-grid">
-                    <div class="element-card"><div class="element-icon">🔥</div><div class="element-label">ELEMENT</div><div class="element-value">${data.element}</div><div class="element-detail">${data.elementDetails.substring(0,40)}…</div></div>
-                    <div class="element-card"><div class="element-icon">🎨</div><div class="element-label">COLOR</div><div class="element-value">${data.color}</div><div class="element-detail">${data.colorDetails.substring(0,40)}…</div></div>
-                    <div class="element-card"><div class="element-icon">💎</div><div class="element-label">GEM</div><div class="element-value">${data.gem.split(',')[0]}</div><div class="element-detail">${data.crystalDetails.substring(0,40)}…</div></div>
-                    <div class="element-card"><div class="element-icon">🪐</div><div class="element-label">PLANET</div><div class="element-value">${data.planetary.split(',')[0]}</div><div class="element-detail">${data.astrology}</div></div>
-                    <div class="element-card"><div class="element-icon">🔯</div><div class="element-label">TAROT</div><div class="element-value">${data.tarot.split(',')[0]}</div><div class="element-detail">${data.chakra}</div></div>
-                    <div class="element-card"><div class="element-icon">🧘</div><div class="element-label">CHAKRA</div><div class="element-value">${data.chakra.split(' ')[0]}</div><div class="element-detail">${data.chakraDetails.substring(0,40)}…</div></div>
+                    <div class="element-card"><div class="element-icon">🔥</div><span class="element-label">ELEMENT</span><div class="element-value">${data.element}</div><div class="element-detail">${data.elementDetails}</div></div>
+                    <div class="element-card"><div class="element-icon">🎨</div><span class="element-label">COLOR</span><div class="element-value">${data.color}</div><div class="element-detail">${data.colorDetails}</div></div>
+                    <div class="element-card"><div class="element-icon">💎</div><span class="element-label">GEM</span><div class="element-value">${data.gem}</div><div class="element-detail">${data.crystalDetails}</div></div>
+                    <div class="element-card"><div class="element-icon">🪐</div><span class="element-label">PLANET</span><div class="element-value">${data.planetary}</div><div class="element-detail">${data.astrology}</div></div>
+                    <div class="element-card"><div class="element-icon">🔯</div><span class="element-label">TAROT</span><div class="element-value">${data.tarot}</div><div class="element-detail">${data.chakra}</div></div>
+                    <div class="element-card"><div class="element-icon">🧘</div><span class="element-label">CHAKRA</span><div class="element-value">${data.chakra.split(' ')[0]}</div><div class="element-detail">${data.chakraDetails}</div></div>
                 </div>
 
                 <div class="depth-section">
@@ -1262,14 +1112,13 @@
 
                 <div class="synthesis-footer">
                     <strong>🔮 COMPLETE NUMEROLOGICAL SYNTHESIS · CRYSTAL ASTROLOGY INSIGHTS</strong><br><br>
-                    ${data.expression} Your chakra: ${data.chakraDetails} Your crystal allies: ${data.crystalDetails} Your element: ${data.elementDetails} Your colors: ${data.colorDetails}
+                    ${data.expression}<br><br>Chakra: ${data.chakraDetails} • Crystal Allies: ${data.crystalDetails} • Element: ${data.elementDetails} • Color: ${data.colorDetails}
                 </div>
             `;
 
-            const dashboard = document.getElementById('dashboard');
-            dashboard.innerHTML = html;
-            dashboard.classList.add('visible');
-            window.scrollTo({ top: dashboard.offsetTop - 20, behavior: 'smooth' });
+            document.getElementById('dashboard').innerHTML = html;
+            document.getElementById('dashboard').classList.add('visible');
+            window.scrollTo({ top: document.getElementById('dashboard').offsetTop - 20, behavior: 'smooth' });
         };
 
         window.useCurrentYear = function() {
@@ -1277,8 +1126,8 @@
         };
 
         window.onload = function() {
-            document.getElementById('birthDate').value = "1987-03-17";
-            document.getElementById('fullName').value = "JONATHAN DIGGS";
+            document.getElementById('birthDate').value = "1985-10-23";
+            document.getElementById('fullName').value = "ALEXANDER THORNE";
             revealPath();
         };
     })();
